@@ -3,7 +3,7 @@ package bean;
 public class FltPlan {
     public String flt_no;
     public String regitration_num;
-    public  String acft_type;
+    public String acft_type;
     public String to_ap;
     public String ld_ap;
     public String dep_time;

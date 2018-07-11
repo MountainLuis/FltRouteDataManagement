@@ -20,7 +20,8 @@ public class AccessHelper {
         return conn;
     }
     public static ResultSet getResultSet(String time) {
-        String sql = "select * from fme where P_DEPTIME like'" + time +"%'";
+//        String sql = "select * from fme where P_DEPTIME like'" + time +"%'";
+        String sql = "select * from test where P_DEPTIME like'" + time +"%'";
         ResultSet rs = null;
         Connection conn = getConnection();
         if (conn == null) {

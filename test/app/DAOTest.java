@@ -1,5 +1,6 @@
 package app;
 
+import bean.FltPlan;
 import bean.PointInfo;
 import org.junit.Test;
 
@@ -72,5 +73,16 @@ public class DAOTest {
         while(iter.hasNext()) {
             System.out.println(iter.next() + " " + i++);
         }
+    }
+
+    @Test
+    public void getFltPlan() {
+        DataAccessObject dao = new DataAccessObject();
+        String time = "20180601";
+        List<FltPlan> plans = dao.getFltPlan(time);
+        for (FltPlan fp : plans) {
+            System.out.println(fp.flt_no);
+        }
+
     }
 }

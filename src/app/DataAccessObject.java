@@ -128,26 +128,31 @@ public class DataAccessObject {
         return  pList;
     }
 
-    public void getFltPlan(String time) {
-//        List<FltPlan> plans = new ArrayList<>();
-//        String sql = "select * from fme "
-//
-//            String sql = "select * from fme";
-//            ResultSet rs = AccessHelper.getResultSet(sql);
-//            try {
-//                while(rs.next()) {
-//                    FltPath fp = new FltPath();
-//                    fp.origAP = rs.getString("P_DEPAP");
-//                    fp.destAP = rs.getString("P_ARRAP");
-//                    fp.route = rs.getString("P_ROUTE");
-//                    fp.abroad = judgeAbroad(fp);
-//                    paths.add(fp);
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
-//            return paths;
-//        }
+    public List<FltPlan> getFltPlan(String time) {
+        List<FltPlan> plans = new ArrayList<>();
+        ResultSet rs = AccessHelper.getResultSet(time);
+        try {
+            while (rs.next()) {
+                FltPlan fp = new FltPlan();
+                fp.flt_no = rs.getString("FLIGHTID");
+                fp.regitration_num = rs.getString("P_REGISTENUM");
+                fp.acft_type = rs.getString("P_AIRCRAFTTYPE");
+                fp.to_ap = rs.getString("P_DEPAP");
+                fp.ld_ap = rs.getString("P_ARRAP");
+                fp.dep_time = rs.getString("P_DEPTIME");
+                fp.arr_time = rs.getString("P_ARRTIME");
+                fp.flt_path = rs.getString("P_ROUTE");
+                if (fp.to_ap == null || fp.ld_ap == null || fp.flt_path == null) {
+                    continue;
+                } else {
+                    plans.add(fp);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return plans;
+    }
 //        public int judgeAbroad(FltPath fp) {
 //            String pattern = "^Z[A-Z]*$";
 //            if ((fp.origAP.matches(pattern)) &&
@@ -159,6 +164,6 @@ public class DataAccessObject {
 //        }
 
 
-    }
+
 
 }
