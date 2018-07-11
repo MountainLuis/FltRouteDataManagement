@@ -29,49 +29,44 @@ public class DealWithNewNaipData {
     }
     public static void main(String[] args) {
         DealWithNewNaipData dnnd = new DealWithNewNaipData();
-        Map<String, List<String>> res = dnnd.dealWithAllData();
+        Map<String,  List<Point>> res = dnnd.dealWithAllData();
         System.out.println("Insert into DB:");
         long start = System.currentTimeMillis();
-        MysqlHelperNew.insertIntoDB(res);
+        MysqlHelperNew.insert2NameIntoDB(res);
         System.out.println("Insert end.");
         System.out.println("cost time:" + (System.currentTimeMillis() - start)/1000);
         dnnd.printMap(res);
     }
-    public void printMap(Map<String, List<String>> res) {
+    public void printMap(Map<String,  List<Point>> res) {
         for (String r : res.keySet()) {
-            for (String p : res.get(r)) {
-                System.out.println(r + " " + p);
+            for (Point p : res.get(r)) {
+                System.out.println(r + " " + p.name + " : " + p.pid);
             }
         }
     }
 
 
-    public Map<String, List<String>> dealWithAllData() {
-        Map<String, List<String>> routes = new HashMap<>();
+    public Map<String,  List<Point>> dealWithAllData() {
+        Map<String,  List<Point>> routes = new HashMap<>();
         for (String route : routeInfo.keySet()) {
-            List<String> pList =spliceRouteLeg(routeRelation.get(route));
+            List<Point> pList =spliceRouteLeg(routeRelation.get(route));
             routes.put(routeInfo.get(route), pList);
         }
      return routes;
     }
-    public List<String> spliceRouteLeg(List<String> legs) {
+    public List<Point> spliceRouteLeg(List<String> legs) {
+        List<Point> pList = new ArrayList<>();
 
-        List<String> pList = new ArrayList<>();
         for (String leg : legs) {
             String[] pts = routeLeg.get(leg);
-            if (!pList.contains(pts[0])) {
-                pList.add(pts[0]);
+            Point p0 = new Point(pts[0],transferNameToID(pts[0]));
+            Point p1 = new Point(pts[1],transferNameToID(pts[1]));
+            if (!pList.contains(p0)){
+                pList.add(p0);
             }
-            if (!pList.contains(pts[1])) {
-                pList.add(pts[1]);
+            if (!pList.contains(p1)) {
+                pList.add(p1);
             }
-//            for (int i = 0; i < 2; i++) {
-//                if (!pList.contains(transferNameToID(pts[i]))) {
-//                    pList.add(transferNameToID(pts[i]));
-//                } else {
-//                    continue;
-//                }
-//            }
          }
         return pList;
     }

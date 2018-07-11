@@ -1,5 +1,6 @@
 package app;
 
+import bean.Point;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -56,8 +57,8 @@ public class DealWithNewNaipDataTest {
         legs.add("13710");
         legs.add("16155");
         legs.add("16156");
-        List<String> res = dnn.spliceRouteLeg(legs);
-        for (String s : res) {
+        List<Point> res = dnn.spliceRouteLeg(legs);
+        for (Point s : res) {
             System.out.println(s);
         }
 

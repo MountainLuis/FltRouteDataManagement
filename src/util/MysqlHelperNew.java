@@ -1,5 +1,7 @@
 package util;
 
+import bean.Point;
+
 import java.sql.*;
 import java.util.List;
 import java.util.Map;
@@ -66,6 +68,32 @@ public class MysqlHelperNew {
             e.printStackTrace();
         }
     }
-
+    public static void insert2NameIntoDB(Map<String, List<Point>> routes) {
+        String sql = "INSERT INTO route_naip_fullname (route,fix_pt,pt_name,seq) VALUES (?,?,?,?)";
+        Connection conn = getConnection();
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            int idx = 0;
+            String tmp = null;
+            for (String r : routes.keySet()) {
+                for (int i = 0; i < routes.get(r).size(); i++) {
+                    Point pt = routes.get(r).get(i);
+                    pstmt.setString(1, r);
+                    pstmt.setString(2, pt.pid);
+                    pstmt.setString(3, pt.name);
+                    pstmt.setInt(4, i);
+                    pstmt.addBatch();
+                    idx++;
+                    if (idx % 1000 == 0) {
+                        pstmt.executeBatch();
+                    }
+                }
+            }
+            pstmt.executeBatch();
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
