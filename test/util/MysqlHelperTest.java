@@ -49,7 +49,7 @@ public class MysqlHelperTest {
         String r = "A1";
         String start = "SUC";
         String end = "OSTAR";
-        List<PointInfo> pList = grd.getSubPtSeq(r, start, end);
+        List<PointInfo> pList = grd.getSubPtSeq(r, start, end, 1);
         Map<String, List<PointInfo>> pathMap = new HashMap<>();
         pathMap.put("zsss-zbaa", pList);
         MysqlHelper.insertFltPathIntoMysql(pathMap);

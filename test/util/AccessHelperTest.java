@@ -18,8 +18,8 @@ public class AccessHelperTest {
 
     @Test
     public void getResultSet() throws SQLException {
-        String sql = "select * from test";
-        ResultSet rs = AccessHelper.getResultSet(sql);
+        String time = "20180601";
+        ResultSet rs = AccessHelper.getResultSet(time);
         while (rs.next()) {
             System.out.println(rs.getString("FLIGHTID"));
         }

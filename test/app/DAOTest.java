@@ -36,18 +36,27 @@ public class DAOTest {
         }
 
     }
+    @Test
+    public void getPtSeqNaip() {
+        DataAccessObject grd = new DataAccessObject();
+        List<PointInfo> pList = grd.getPtSeqNaip("Y475");
+        for (PointInfo s : pList) {
+            System.out.println(s.fix_pt + " : " + s.idx);
+        }
+
+    }
 
     @Test
     public void getSubPtSeq() {
         DataAccessObject grd = new DataAccessObject();
         String r = "A1";
-        String start = "FENIX";
-//        String start = "SUC";
-        String end = "SUC";
-//        String end = "OSTAR";
+//        String start = "FENIX";
+        String start = "SUC";
+//        String end = "SUC";
+        String end = "OSTAR";
 //        String end = "SUC";
 //        String end = "FENIX";
-        List<PointInfo> pList = grd.getSubPtSeq(r, start, end);
+        List<PointInfo> pList = grd.getSubPtSeq(r, start, end, 1);
         for (PointInfo s : pList) {
             System.out.println(s.fix_pt + " : " + s.idx);
         }

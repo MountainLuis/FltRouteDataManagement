@@ -144,7 +144,7 @@ public class RouteManager {
                 if (i == tmp.length) {
                     System.out.println("End with a Route.");
                 } else {
-                    ptsOnR = grd.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]));
+                    ptsOnR = grd.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]), 1);
                 }
                 ptsOnR.get(0).addCons( fixPts.get(fixPts.size() -1));
                 fixPts.remove(fixPts.size() -1);
