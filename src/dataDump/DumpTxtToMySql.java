@@ -1,4 +1,4 @@
-package app;
+package dataDump;
 
 import bean.PointInfo;
 import util.MysqlHelper;
@@ -52,8 +52,8 @@ public class DumpTxtToMySql {
         String[] tmp = s.split("\\s+");
         PointInfo pi = new PointInfo();
         pi.fix_pt = tmp[2];
-        pi.longitude = Double.valueOf(tmp[4]);
-        pi.latitude = Double.valueOf(tmp[3]);
+//        pi.longitude = Double.valueOf(tmp[4]);
+//        pi.latitude = Double.valueOf(tmp[3]);
         pi.enRoute = tmp[0];
         pi.idx = Integer.valueOf(tmp[1]);
         return pi;

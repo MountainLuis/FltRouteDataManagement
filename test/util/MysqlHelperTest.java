@@ -1,13 +1,15 @@
 package util;
 
-import app.DumpTxtToMySql;
-import app.GetRouteData;
+import app.DataAccessObject;
+import bean.FltPlan;
+import dataDump.DumpTxtToMySql;
 import bean.PointInfo;
 import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +45,7 @@ public class MysqlHelperTest {
 
     @Test
     public void insertFltPathIntoMysql() {
-        GetRouteData grd = new GetRouteData();
+        DataAccessObject grd = new DataAccessObject();
         String r = "A1";
         String start = "SUC";
         String end = "OSTAR";
@@ -52,5 +54,19 @@ public class MysqlHelperTest {
         pathMap.put("zsss-zbaa", pList);
         MysqlHelper.insertFltPathIntoMysql(pathMap);
         System.out.println("Done.");
+    }
+
+    @Test
+    public void insertPlanTable() {
+        String table = "plan20180601";
+        FltPlan fltPlan = new FltPlan("CCA1233", "ZBAA", "ZSPD");
+        List<FltPlan> plans = new ArrayList<>();
+        plans.add(fltPlan);
+        MysqlHelper.insertPlanTable(table, plans);
+    }
+    @Test
+    public void createTable() {
+        String table = "plan20180601";
+        MysqlHelper.createTable(table);
     }
 }

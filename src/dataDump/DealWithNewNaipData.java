@@ -1,4 +1,4 @@
-package app;
+package dataDump;
 import bean.Point;
 import util.MysqlHelperNew;
 
@@ -19,7 +19,7 @@ public class DealWithNewNaipData {
     Map<String, String> routeInfo = null;
     Map<String, List<String>> routeRelation = null;
     Map<String, String[]> routeLeg = null;
-    Map<String, String> pointInfo = null;
+    public Map<String, String> pointInfo = null;
 
     public DealWithNewNaipData() {
         routeInfo = getRouteInfo();

@@ -1,7 +1,6 @@
 package app;
 
 import bean.PointInfo;
-import com.sun.javafx.collections.MappingChange;
 import util.MysqlHelper;
 
 import java.sql.ResultSet;
@@ -10,7 +9,7 @@ import java.util.*;
 
 public class RouteManager {
     public Map<String, List<PointInfo>> routeSeq = null;  //这个表用于存放每条城市对和它对应的所有航路点
-    GetRouteData grd = new GetRouteData();
+    DataAccessObject grd = new DataAccessObject();
     public List<String> exceptOD = new ArrayList<>();
     public static void main(String[] args) {
         RouteManager rm = new RouteManager();

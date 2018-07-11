@@ -1,13 +1,12 @@
 package app;
 
 import bean.Point;
+import dataDump.DealWithNewNaipData;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 public class DealWithNewNaipDataTest {
 

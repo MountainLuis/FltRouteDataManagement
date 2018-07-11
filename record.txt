@@ -1,3 +1,4 @@
+# 发现的问题
 1，RKPK-VVDN 航路有问题，Y742航路在数据库中找不到，点MUGUS、KAPLI、RAMUS、ARROW无法找到坐标。测试发现。
 2, Y346航路点名称，flt_plan中是VRK，AAIP中是VKR，哪个正确现在不能确定；使用VKR
 3,WP900 L4 LIPLO，L4航路没有WP900和LIPLO点
@@ -6,3 +7,7 @@
     ZGDY-RCTP;ZUCK-ZGGG;VTBS-ZBAA;
 
 5,黑河NDB台有两个，一个呼号OQ，一个呼号QD。
+
+# 操作记录
+ - 从网上找到的NAIP数据航路匹配航路点之后记录条数约2000条，来自正式渠道的数据约3600条，不建议选择网络
+ 来源数据。

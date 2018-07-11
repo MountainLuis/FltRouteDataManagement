@@ -9,12 +9,12 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
-public class GetRouteDataTest {
+public class DAOTest {
 
     @Test
     public void getDataFromSql() {
-        GetRouteData  grd = new GetRouteData();
-        Map<String, List<PointInfo>> routeMap = grd.getDataFromSql();
+        DataAccessObject  grd = new DataAccessObject();
+        Map<String, List<PointInfo>> routeMap = grd.getRouteData();
         System.out.println(routeMap.keySet().size());
         Iterator iter = routeMap.keySet().iterator();
         while(iter.hasNext()) {
@@ -23,13 +23,13 @@ public class GetRouteDataTest {
     }
     @Test
     public void getRouteData() {
-        GetRouteData  grd = new GetRouteData();
+        DataAccessObject  grd = new DataAccessObject();
         System.out.println(grd.routeMap.keySet().size());
     }
 
     @Test
     public void getPtSeq() {
-        GetRouteData grd = new GetRouteData();
+        DataAccessObject grd = new DataAccessObject();
         List<PointInfo> pList = grd.getPtSeq("Y346");
         for (PointInfo s : pList) {
             System.out.println(s.fix_pt + " : " + s.idx);
@@ -39,7 +39,7 @@ public class GetRouteDataTest {
 
     @Test
     public void getSubPtSeq() {
-        GetRouteData grd = new GetRouteData();
+        DataAccessObject grd = new DataAccessObject();
         String r = "A1";
         String start = "FENIX";
 //        String start = "SUC";
@@ -50,6 +50,18 @@ public class GetRouteDataTest {
         List<PointInfo> pList = grd.getSubPtSeq(r, start, end);
         for (PointInfo s : pList) {
             System.out.println(s.fix_pt + " : " + s.idx);
+        }
+    }
+
+    @Test
+    public void getNaipData() {
+        DataAccessObject dao = new DataAccessObject();
+        Map<String, List<PointInfo>> naipData = dao.getNaipData();
+        System.out.println(naipData.size() + "====================");
+        Iterator iter = naipData.keySet().iterator();
+        int i = 1;
+        while(iter.hasNext()) {
+            System.out.println(iter.next() + " " + i++);
         }
     }
 }

@@ -30,7 +30,7 @@ public class RouteManagerTest {
         List<PointInfo> pList = rm.splitRoute(s1);
         System.out.println("========================================================");
         for (PointInfo pi : pList) {
-            System.out.println(pi.fix_pt + " " + pi.longitude + " " + pi.height_cons);
+            System.out.println(pi.fix_pt + " " + pi.height_cons);
         }
 
 

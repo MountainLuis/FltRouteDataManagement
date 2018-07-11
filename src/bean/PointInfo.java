@@ -2,8 +2,8 @@ package bean;
 
 public class PointInfo {
     public String fix_pt;
-    public double longitude;
-    public double latitude;
+//    public double longitude;
+//    public double latitude;
     public int idx;
     public String enRoute;
     public String height_cons;
@@ -14,9 +14,9 @@ public class PointInfo {
     public PointInfo(String fix_pt) {
         this.fix_pt = fix_pt;
     }
-    public boolean isCompleted() {
-        return !(this.longitude == 0 && this.latitude == 0);
-    }
+//    public boolean isCompleted() {
+//        return !(this.longitude == 0 && this.latitude == 0);
+//    }
     @Override
     public boolean equals(Object obj){
         if (!(obj instanceof PointInfo)) {

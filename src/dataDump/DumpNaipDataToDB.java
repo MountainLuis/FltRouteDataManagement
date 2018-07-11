@@ -1,20 +1,24 @@
-package app;
+package dataDump;
 
 
-import bean.PointInfo;
 import bean.RoutePoint;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import util.MysqlHelper;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 此程序用于将.nav文件中的naip数据导入到数据库中。
+ */
 public class DumpNaipDataToDB {
     public static void main(String[] args) {
+        String path = "D:\\data\\PFPX-PRC-NAIP-Expansion-master";
         DumpNaipDataToDB dt = new DumpNaipDataToDB();
-//        List<RoutePoint> pList = dt.getDataFromFile();
-//        MysqlHelper.insertNaipInfoIntoDB(pList);
-    }
+        List<String> fileList = dt.getFiles(path);
+        dt.doGetDataByStep(fileList);
+     }
     public List<String> getFiles(String path) {
         List<String> files = new ArrayList<>();
         File file = new File(path);
@@ -29,8 +33,15 @@ public class DumpNaipDataToDB {
     public void doGetDataByStep(List<String > files){
         String pat = "NAIP AIRWAYS";
         for (String file : files) {
-            if (file.indexOf(pat) != -1) {
+            if (((file.indexOf("NAIP AIRWAYS ATS.nav")) != -1)
+                    || (file.indexOf("NAIP AIRWAYS HVFR.nav") != -1)) {
+                continue;
+            }else if (file.indexOf(pat) != -1) {
                 System.out.println(file);
+                List<RoutePoint> pList = getDataFromFile(file);
+//                MysqlHelper.insertNaipInfoIntoDB(pList);
+                System.out.println("Insert finished." + pList.size());
+                System.out.println("Insert DB Unused.");
             }
         }
     }
@@ -55,8 +66,7 @@ public class DumpNaipDataToDB {
                         pList.add(pts[i]);
                     }
                 }
-//                System.out.println("Done" + tmp);
-            }
+             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -77,6 +87,10 @@ public class DumpNaipDataToDB {
         } else if (tmp.length == 6) {
             RoutePoint p1 = new RoutePoint(tmp[1],tmp[4].substring(1));
             RoutePoint p2 = new RoutePoint(tmp[1],tmp[5].substring(1));
+            pts = new RoutePoint[]{p1, p2};
+        } else if (tmp.length == 5) {
+            RoutePoint p1 = new RoutePoint(tmp[1],tmp[3].substring(1));
+            RoutePoint p2 = new RoutePoint(tmp[1],tmp[4].substring(1));
             pts = new RoutePoint[]{p1, p2};
         } else {
             System.out.println("Check the Record:" + s);

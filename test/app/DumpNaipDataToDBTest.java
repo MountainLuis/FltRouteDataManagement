@@ -2,12 +2,11 @@ package app;
 
 
 import bean.RoutePoint;
+import dataDump.DumpNaipDataToDB;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class DumpNaipDataToDBTest {
 
@@ -54,7 +53,9 @@ public class DumpNaipDataToDBTest {
         List<String> files = dn.getFiles(path);
         System.out.println(files.size());
         for (String s : files) {
-            System.out.println(s);
+            if ((s.indexOf("NAIP AIRWAYS ATS.nav")) != -1) {
+                System.out.println(s);
+            }
         }
     }
 
@@ -63,7 +64,6 @@ public class DumpNaipDataToDBTest {
         DumpNaipDataToDB dn = new DumpNaipDataToDB();
         String path = "D:\\data\\PFPX-PRC-NAIP-Expansion-master";
         List<String> files = dn.getFiles(path);
-        System.out.println(files.size());
         dn.doGetDataByStep(files);
     }
 }
