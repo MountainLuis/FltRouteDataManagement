@@ -3,18 +3,32 @@ package app;
 import bean.FltPlan;
 import util.MysqlHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FltPlanManagement {
+    public static RouteManager rm = new RouteManager();
+    public static DataAccessObject dao = new DataAccessObject();
 
     public static void main(String[] args) {
+        FltPlanManagement fpm = new FltPlanManagement();
         long time = 20180601;
         for (int i = 0; i < 30; i++) {
             String s = String.valueOf((time + i));
-            System.out.println(s);
+            List<FltPlan> plans = dao.getFltPlan(s);
+            plans = fpm.changePaths(plans);
+            fpm.storagePlans(s, plans);
         }
     }
-
+    public List<FltPlan> changePaths(List<FltPlan> plans) {
+        List<FltPlan> pList = new ArrayList<>();
+        for (FltPlan plan : plans) {
+            String path = rm.transferFltPath(plan.flt_path, plan.to_ap,plan.ld_ap);
+            plan.flt_path = path;
+            pList.add(plan);
+        }
+        return pList;
+    }
     /**
      * 把处理完的计划数据存储到对应的表中。
      * @param time

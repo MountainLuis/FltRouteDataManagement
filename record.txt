@@ -1,7 +1,7 @@
 # 发现的问题
 1，RKPK-VVDN 航路有问题，Y742航路在数据库中找不到，点MUGUS、KAPLI、RAMUS、ARROW无法找到坐标。测试发现。
 2, Y346航路点名称，flt_plan中是VRK，AAIP中是VKR，哪个正确现在不能确定；使用VKR
-3,WP900 L4 LIPLO，L4航路没有WP900和LIPLO点
+3,WP900 L4 LIPLO，L4航路没有WP900和LIPLO点 ;(L4可能在NAIP)
 
 4,need check:
     ZGDY-RCTP;ZUCK-ZGGG;VTBS-ZBAA;

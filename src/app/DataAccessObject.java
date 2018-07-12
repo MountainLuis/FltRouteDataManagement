@@ -153,17 +153,4 @@ public class DataAccessObject {
         }
         return plans;
     }
-//        public int judgeAbroad(FltPath fp) {
-//            String pattern = "^Z[A-Z]*$";
-//            if ((fp.origAP.matches(pattern)) &&
-//                    (fp.destAP.matches(pattern))) {
-//                return 0;
-//            } else {
-//                return 1;
-//            }
-//        }
-
-
-
-
 }
