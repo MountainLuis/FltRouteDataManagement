@@ -110,9 +110,12 @@ public class RouteManager {
     }
     public String addToString(List<PointInfo> pList){
         StringBuilder res = new StringBuilder();
-        for (PointInfo pi: pList) {
+        for (int i = 0; i < pList.size(); i++) {
+            PointInfo pi = pList.get(i);
             res.append(pi.fix_pt);
-            res.append("-");
+            if (i != pList.size() - 1) {
+                res.append("-");
+            }
         }
         return res.toString();
     }
@@ -160,7 +163,11 @@ public class RouteManager {
                 }
 //                ptsOnR.get(0).addCons( fixPts.get(fixPts.size() -1));
 //                fixPts.remove(fixPts.size() -1);
-                fixPts.addAll(ptsOnR);
+                if (ptsOnR == null) {
+                    continue;
+                }else {
+                    fixPts.addAll(ptsOnR);
+                }
             } else {
                 flag[i] = 0;
                 System.out.println("Point:" + tmp[i]);

@@ -116,14 +116,18 @@ public class DataAccessObject {
             System.out.println("End Point Error."+ r  + startPt + start + " " + endPt + end);
             System.exit(0);
         }
+        if (start +1 == end || end + 1 == start) {
+//            pList.add(route.get((start < end ? end : start)));
+            return pList;
+        }
         if (start > end) {
             int tmp = start;
             start = end;
             end = tmp;
-            pList = route.subList(start + 1,end + 1);
+            pList = route.subList(start + 1,end);
             Collections.reverse(pList);
         } else {
-            pList = route.subList(start, end);
+            pList = route.subList(start + 1, end);
         }
         return  pList;
     }

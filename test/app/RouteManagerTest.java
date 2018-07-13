@@ -27,11 +27,11 @@ public class RouteManagerTest {
                 "  LIKNU R815 BIKRO N869 RATIN/K0913F380 N869 VTB L999 PINUG T52  RAVOK";
         String s3 = " NOBER W21 CMP R474 TEBAK/K0871S0950 R474 WUY R343 LKO A461 P385/K0825S0950 A461 HG W81 BOBAK";
         String s4 = "DYG W138 LLC H24 P25 H17 BZ/K0844S0780 R596  SULEM/N0448F240 R596 BERBA/N0464F260 B576 BAKER BK1A";
-        List<PointInfo> pList = rm.splitRoute(s1);
+//        List<PointInfo> pList = rm.splitRoute(s1);
         System.out.println("========================================================");
-        for (PointInfo pi : pList) {
-            System.out.println(pi.fix_pt + " " + pi.height_cons);
-        }
+//        for (PointInfo pi : pList) {
+//            System.out.println(pi.fix_pt + " " + pi.height_cons);
+//        }
 
 
     }
