@@ -147,14 +147,23 @@ public class RouteManager {
         List<PointInfo> fixPts = new ArrayList<>();  //as result
         String[] tmp = r.trim().split("\\s+");
         int[] flag = new int[tmp.length]; //route = 1; point = 0;
-        for(int i = 0; i < tmp.length; i++) {
-            if (tmp[i].equals("DCT")) {
+        //---------------------------------------
+        if (tmp[0].equals("DCT") || tmp[0].equals("L4")) {
+            flag[0] = -1;
+        } else {
+            PointInfo p0 = createPoint(tmp[0]);
+            fixPts.add(p0);
+            flag[0] = 0;
+        }
+        //-----------------------------------------
+        for(int i = 1; i < tmp.length; i++) {
+            if (tmp[i].equals("DCT") || tmp[i].equals("L4")) {
                 flag[i] = -1;
                 continue;
             }
             if (isRoute(tmp[i], abroad) && (flag[i-1] == 0)) {
                 flag[i] = 1;
-                System.out.println("R:" + tmp[i]);
+//                System.out.println("R:" + tmp[i]);
                 List<PointInfo> ptsOnR = new ArrayList<>();
                 if (i == tmp.length) {
                     System.out.println("End with a Route.");
@@ -170,7 +179,7 @@ public class RouteManager {
                 }
             } else {
                 flag[i] = 0;
-                System.out.println("Point:" + tmp[i]);
+//                System.out.println("Point:" + tmp[i]);
                 PointInfo p = createPoint(tmp[i]);
                 if (fixPts.contains(p)) {
 //                    exceptOD.add(r);

@@ -11,7 +11,8 @@ import java.util.Map;
 public class MysqlHelper {
     public static final String url = "jdbc:mysql://localhost:3306/flightplan";
     public static final String username = "root";
-    public static final String password = "123456";
+//    public static final String password = "123456";
+public static final String password = "root";
     private static Connection conn = null;
 
     public static Connection getConnection(){

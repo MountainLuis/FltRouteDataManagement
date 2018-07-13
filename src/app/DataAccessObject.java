@@ -113,8 +113,9 @@ public class DataAccessObject {
             }
         }
         if (start == end) {
-            System.out.println("End Point Error."+ r  + startPt + start + " " + endPt + end);
-            System.exit(0);
+            System.out.println("End Point Error:"+ r  + " " + startPt + " " + endPt);
+            return pList;
+//            System.exit(0);
         }
         if (start +1 == end || end + 1 == start) {
 //            pList.add(route.get((start < end ? end : start)));
