@@ -165,8 +165,8 @@ public class RouteManager {
                 flag[i] = 1;
 //                System.out.println("R:" + tmp[i]);
                 List<PointInfo> ptsOnR = new ArrayList<>();
-                if (i == tmp.length) {
-                    System.out.println("End with a Route.");
+                if (i == tmp.length - 1) {
+                    System.err.println("不能以航路作为path结尾。" + r);
                 } else {
                     ptsOnR = dao.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]), abroad);
                 }
@@ -181,13 +181,14 @@ public class RouteManager {
                 flag[i] = 0;
 //                System.out.println("Point:" + tmp[i]);
                 PointInfo p = createPoint(tmp[i]);
-                if (fixPts.contains(p)) {
-//                    exceptOD.add(r);
-                    System.out.println("Check the sequence of points." + p.fix_pt);
-                    continue;
-                } else {
-                    fixPts.add(p);
-                }
+                fixPts.add(p);
+//                if (fixPts.contains(p)) {
+////                    exceptOD.add(r);
+//                    System.out.println("表中已经有这个点" + p.fix_pt);
+//                    continue;
+//                } else {
+//                    fixPts.add(p);
+//                }
             }
         }
         return fixPts;
@@ -218,20 +219,21 @@ public class RouteManager {
      */
     private PointInfo createPoint(String s) {
         PointInfo p = new PointInfo();
-        if (s.contains("/")) {
-            String[] tmp = s.split("/");
-            if (tmp[0].equals("VRK")) {
-               Arrays.fill(tmp,0,1,"VKR");
-            }
-            p.fix_pt = tmp[0];
-//            String[] cons = splitCons(tmp[1]);
-//            p.speed_cons = cons[0];
-//            p.height_cons = cons[1];
-        } else {
-            p.fix_pt = s;
-//            p.height_cons = "";
-//            p.speed_cons = "";
-        }
+        p.fix_pt = splitPointName(s);
+//        if (s.contains("/")) {
+//            String[] tmp = s.split("/");
+//            if (tmp[0].equals("VRK")) {
+//               Arrays.fill(tmp,0,1,"VKR");
+//            }
+//            p.fix_pt = tmp[0];
+////            String[] cons = splitCons(tmp[1]);
+////            p.speed_cons = cons[0];
+////            p.height_cons = cons[1];
+//        } else {
+//            p.fix_pt = s;
+////            p.height_cons = "";
+////            p.speed_cons = "";
+//        }
 
         return p;
     }
@@ -278,7 +280,7 @@ public class RouteManager {
             return true;
         }
     }
-        public int judgeAbroad(String toAp, String ldAp) {
+    public int judgeAbroad(String toAp, String ldAp) {
             String pattern = "^Z[A-Z]*$";
             if ((toAp.matches(pattern)) &&
                     (ldAp.matches(pattern))) {
@@ -286,5 +288,5 @@ public class RouteManager {
             } else {
                 return 1;
             }
-        }
+    }
 }

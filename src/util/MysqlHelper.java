@@ -60,7 +60,7 @@ public static final String password = "root";
         try {
             Statement stmt = conn.createStatement();
             if(stmt.executeUpdate(sql) != -1) {
-                System.out.println("执行完成");
+                System.out.println("新建表完成");
             } else{
                 System.out.println("执行失败！");
             }

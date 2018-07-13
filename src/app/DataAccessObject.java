@@ -5,13 +5,28 @@ import bean.PointInfo;
 import util.AccessHelper;
 import util.MysqlHelper;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
+import java.util.logging.*;
 
 public class DataAccessObject {
-    public Map<String, List<PointInfo>> routeMap = null;
-    public Map<String, List<PointInfo>> naipMap = null;
+    static Logger logger = Logger.getLogger("foo");
+    static {
+        try {
+
+            FileHandler fileHandler = new FileHandler("g:\\tmp\\data\\textlog.txt");
+            SimpleFormatter sf = new SimpleFormatter();
+            fileHandler.setFormatter(sf);
+            logger.addHandler(fileHandler);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Map<String, List<PointInfo>> routeMap = null;
+    public static Map<String, List<PointInfo>> naipMap = null;
     public DataAccessObject() {
         routeMap = getRouteData();
         naipMap = getNaipData();
@@ -80,18 +95,19 @@ public class DataAccessObject {
     }
     public List<PointInfo> getPtSeq(String r) {
         if (!routeMap.keySet().contains(r)) {
-            System.out.println("Error, Check the route " + r);
+            System.err.println("航路" + r + "不在route_all里。");
             System.exit(0);
         }
         return routeMap.get(r);
     }
     public List<PointInfo> getPtSeqNaip(String r) {
         if (!naipMap.keySet().contains(r)) {
-            System.out.println("Error, Check the route " + r);
+            System.err.println("航路" + r + "不在 naip航路里。");
             System.exit(0);
         }
         return naipMap.get(r);
     }
+
     public List<PointInfo> getSubPtSeq(String r, String startPt, String endPt, int abroad) {
         List<PointInfo> pList = null;
         List<PointInfo> route = null;
@@ -100,7 +116,7 @@ public class DataAccessObject {
         } else if (abroad == 0) {
             route = getPtSeqNaip(r);
         } else {
-            System.out.println("ERROR." + r);
+            System.out.println("abroad标签有误" + r);
         }
         int start = 0, end = 0;
         for (int i = 0; i < route.size(); i++) {
@@ -113,7 +129,10 @@ public class DataAccessObject {
             }
         }
         if (start == end) {
-            System.out.println("End Point Error:"+ r  + " " + startPt + " " + endPt);
+            String res = "航路"+ r  + "不包含点：" + startPt + " " + endPt;
+            LogRecord lr = new LogRecord(Level.INFO,res);
+            logger.log(lr);
+//            System.out.println("End Point Error:"+ r  + " " + startPt + " " + endPt);
             return pList;
 //            System.exit(0);
         }
@@ -147,12 +166,13 @@ public class DataAccessObject {
                 fp.dep_time = rs.getString("P_DEPTIME");
                 fp.arr_time = rs.getString("P_ARRTIME");
                 fp.flt_path = rs.getString("P_ROUTE");
-                if (fp.to_ap == null || fp.ld_ap == null || fp.flt_path == null) {
+                if (fp.to_ap == null || fp.ld_ap == null || fp.flt_path == null || fp.flt_path.equals("")) {
                     continue;
                 } else {
                     plans.add(fp);
                 }
             }
+            System.out.println("读取计划" + time + "完成。");
         } catch (SQLException e) {
             e.printStackTrace();
         }

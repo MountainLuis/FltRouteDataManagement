@@ -8,16 +8,17 @@ import java.util.List;
 
 public class FltPlanManagement {
     public static RouteManager rm = new RouteManager();
-    public static DataAccessObject dao = new DataAccessObject();
+//    public static DataAccessObject dao = new DataAccessObject();
 
     public static void main(String[] args) {
         FltPlanManagement fpm = new FltPlanManagement();
-        long time = 20180601;
+        long time = 20180605;
         for (int i = 0; i < 30; i++) {
             String s = String.valueOf((time + i));
-            List<FltPlan> plans = dao.getFltPlan(s);
+            List<FltPlan> plans = rm.dao.getFltPlan(s);
             plans = fpm.changePaths(plans);
             fpm.storagePlans(s, plans);
+            System.out.println(s + "Used time:" + (System.currentTimeMillis() - time) / 1000);
         }
     }
     public List<FltPlan> changePaths(List<FltPlan> plans) {

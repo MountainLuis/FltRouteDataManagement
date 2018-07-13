@@ -81,7 +81,7 @@ public class DAOTest {
         String time = "20180601";
         List<FltPlan> plans = dao.getFltPlan(time);
         for (FltPlan fp : plans) {
-            System.out.println(fp.flt_no);
+            System.out.println(fp.flt_no + " " + fp.ld_ap + " " + fp.to_ap + " " + fp.flt_path);
         }
 
     }

@@ -13,7 +13,7 @@ public class FltPlanManagementTest {
     public void changePaths() {
         DataAccessObject dao = new DataAccessObject();
         FltPlanManagement fpm = new FltPlanManagement();
-        String time = "20180601";
+        String time = "20180605";
         List<FltPlan> plans = dao.getFltPlan(time);
         plans = fpm.changePaths(plans);
         for (FltPlan p : plans) {
