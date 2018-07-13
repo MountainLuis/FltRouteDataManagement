@@ -1,0 +1,1414 @@
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H1不包含点：SHX 1
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W1不包含点：UGSUT 52
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路N571不包含点：SENFA ALPOB
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M504不包含点：ALPOR DCT
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 3:28:10 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 3:28:11 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:28:11 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UR659不包含点：MIDSI BOPOV
+七月 13, 2018 3:38:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 3:38:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:38:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W2不包含点：DAN NHATA
+七月 13, 2018 3:38:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 3:38:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:38:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:38:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y5不包含点：CJU 79
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J101不包含点：SAMMI SMT
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G345不包含点：OLRIS OLRIS
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J101不包含点：SAMMI SMT
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J86不包含点：S0390 GUY
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J101不包含点：SAMMI SMT
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y1不包含点：EKLON 69
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y7不包含点：DARNO 46
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：BKK MODON
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:48:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J86不包含点：S0390 GUY
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 3:57:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J86不包含点：S0390 GUY
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H11不包含点：SHX NSH
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H39不包含点：DS DS
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B339不包含点：UDA POLHO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:07:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J511不包含点：DOC DAX
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H93不包含点：3201N10715E H151
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:18:23 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:29:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 4:29:04 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路L642不包含点：L642ENREP VMR
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路T344不包含点：GAWOR BIGLU
+七月 13, 2018 4:29:05 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J142不包含点：HG SJW
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J101不包含点：SAMMI SMT
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A1不包含点：BUNTA BUNTA
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J142不包含点：HG SJW
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UR659不包含点：MIDSI BOPOV
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G597不包含点：K0906S1220 DONVO
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:39:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:39:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J86不包含点：S0390 GUY
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UR659不包含点：MIDSI BOPOV
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G578不包含点：GURAG GAJAH
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J101不包含点：SAMMI SMT
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UR659不包含点：MIDSI BOPOV
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UR659不包含点：MIDSI BOPOV
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:49:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M504不包含点：ALPOR DCT
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G578不包含点：GURAG GAJAH
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y517不包含点：JERID SOPHY
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W169不包含点：ISGEG ISGEG
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J455不包含点：AKNAU GLB
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 4:59:27 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H19不包含点：YIH VL
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H15不包含点：XNN XNN
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W23不包含点：ZUH ZUH
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 5:10:06 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A791不包含点：CEA JJSQ20
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y511不包含点：MEDPO RAGPO
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H63不包含点：KEL DJQ
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:10:07 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G578不包含点：GURAG GAJAH
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:20:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W12不包含点：IKENU CG
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:31:22 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 5:41:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B452不包含点：MEVIN KAZIK
+七月 13, 2018 5:41:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y59不包含点：N0465F460 AZAMA
+七月 13, 2018 5:41:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:41:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 5:41:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 5:41:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q702不包含点：VAKON OTKEK
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:41:36 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M646不包含点：N0482F390 HCN
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y711不包含点：MONSI MUGUS
+七月 13, 2018 5:51:50 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 5:51:51 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:02:35 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：ZAMUS SERNA
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G578不包含点：GURAG GAJAH
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R473不包含点：B330POU SIERA
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 6:13:28 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R575不包含点：LEKOB PAPRA
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M750不包含点：ATOTI B1
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：SERNA ZAMUS
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 6:13:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W161不包含点：K0200S0180 WUX
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W161不包含点：WUX K0200M0030
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J101不包含点：SAMMI SMT
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：ZAMUS SERNA
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W58不包含点：WY TOL
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A202不包含点：DABUB DABUB
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R575不包含点：LEKOB PAPRA
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G597不包含点：G597AGAVO DONVO
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 6:24:12 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M646不包含点：M646POTIB HCN
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J86不包含点：S0390 GUY
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路J86不包含点：S0390 GUY
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G471不包含点：POU VAVSO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:34:54 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：ZAMUS SERNA
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W24不包含点：MMV CCB
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y7不包含点：LIPLO 41
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R585不包含点：PNH GONLY
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M504不包含点：ALPOR DCT
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路T580不包含点：LINKU BLZ
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：SERNA ZAMUS
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:45:29 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P90不包含点：IKELA IDOSI
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：SERNA ZAMUS
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G471不包含点：POU VAVSO
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 6:56:19 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G578不包含点：GURAG GAJAH
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H39不包含点：DS DS
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y697不包含点：DCTNOPIK AGAVO
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M646不包含点：N0484F370 HCN
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 7:06:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G471不包含点：POU VAVSO
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z367不包含点：TOSPO KEFIR
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 7:17:13 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G471不包含点：POU VAVSO
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H39不包含点：DS DS
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A202不包含点：DONGI DONGI
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H93不包含点：3201N10715E H151
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：SERNA ZAMUS
+七月 13, 2018 7:17:14 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：ZAMUS SERNA
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H59不包含点：CGA CGA
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H59不包含点：CGA CGA
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y81不包含点：Y57BUNGU BINKS
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W4不包含点：RYN 2
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W23不包含点：ZUH ZUH
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:27:57 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Q549不包含点：TIBER GOTMO
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W623不包含点：SJW PIGAN
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL UDA
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y520不包含点：ZAMUS SERNA
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：UDA SARUL
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT DANUX
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：DANUX MIDGU
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B329不包含点：SEYHA DCT
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R575不包含点：LEKOB PAPRA
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM440不包含点：KATIT MIDGU
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A202不包含点：DONGI DONGI
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R597不包含点：CAB VIGOR
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H31不包含点：HDH H20
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路W624不包含点：AKLOL SJW
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:38:33 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路H82不包含点：LBN BYH
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11155E
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路R372不包含点：R372 NH
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Y511不包含点：MEDPO RAGPO
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路A575不包含点：JONJU GOLOT
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UM634G不包含点：VEDET DAROT
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M646不包含点：M646POTIB HCN
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路Z86不包含点：BONSO ATOTI
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路B469不包含点：VPK PIBAP
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：POLHO HN
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：HN SARUL
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G338不包含点：SARUL HN
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G218不包含点：HN POLHO
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路M771不包含点：VMR 1434N11156E
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路P989不包含点：MEGAS TRAFA
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路UN697不包含点：BHR TORBO
+七月 13, 2018 7:40:37 下午 app.DataAccessObject getSubPtSeq
+信息: 航路G458不包含点：MODON BKK
