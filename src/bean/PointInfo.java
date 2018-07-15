@@ -4,6 +4,7 @@ public class PointInfo {
     public String fix_pt;
 //    public double longitude;
 //    public double latitude;
+    public String pt_name;
     public int idx;
     public String enRoute;
     public String height_cons;

@@ -1,18 +1,21 @@
 package util;
 
+import app.DataAccessObject;
 import bean.FltPlan;
 import bean.PointInfo;
 import bean.RoutePoint;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.List;
 import java.util.Map;
 
 public class MysqlHelper {
+    private static final Logger LOGGER = Logger.getLogger(DataAccessObject.class);
     public static final String url = "jdbc:mysql://localhost:3306/flightplan";
     public static final String username = "root";
-//    public static final String password = "123456";
-public static final String password = "root";
+    public static final String password = "123456";
+//public static final String password = "root";
     private static Connection conn = null;
 
     public static Connection getConnection(){
@@ -26,7 +29,6 @@ public static final String password = "root";
         }
         return conn;
     }
-
     /**
      * 读取表
      * @param table
@@ -53,8 +55,8 @@ public static final String password = "root";
      */
     public static void createTable(String tableName) {
         String  sql = "CREATE TABLE " + tableName + "(id int(10)," +
-                "flt_no varchar(10), registration_num varchar(20), acft_type varchar(10)," +
-                "to_ap varchar(10), ld_ap varchar(10),dep_time varchar(20),arr_time varchar(20), flt_path text" +
+                "flt_no varchar(10), registration_num varchar(255), acft_type varchar(20)," +
+                "to_ap varchar(10), ld_ap varchar(10),dep_time varchar(20),arr_time varchar(20), flt_path longtext" +
                 ")charset=utf8;";
         Connection conn = getConnection();
         try {
@@ -167,13 +169,13 @@ public static final String password = "root";
      * @param od
      * @param path
      */
-    public static void insertIntoSimplePath(String od, String path) {
-        String sql = "INSERT INTO simple_path_2018 (od, path) VALUES (" +
-                od + "," + path +")";
+    public static void insertIntoSimplePath(String path, String od) {
+        String sql = "INSERT INTO simple_od (path, od) VALUES ('" +
+                path + "','" + od  +"')";
         Connection conn = getConnection();
         try {
             Statement stmt = conn.createStatement();
-            stmt.executeQuery(sql);
+             stmt.execute(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -182,18 +184,19 @@ public static final String password = "root";
 
     /**
      * 向数据库中插入城市对航路点信息，航路点用字符串表达；全部插入；
-     * @param strList
+     * @param odMap
      */
-    public static void insertIntoSimplePathWithStringArrayList(List<String[]> strList) {
-        String sql = "INSERT INTO simple_path_2018 (od, path) VALUES (?,?)";
+    public static void insertIntoSimplePathWithStringArrayList(Map<String, String> odMap) {
+        String sql = "INSERT INTO simple_od (path, od) VALUES (?,?)";
         Connection conn = getConnection();
         try {
+            int i = 0;
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            for (int i = 0; i < strList.size(); i++) {
-                String[] tmp = strList.get(i);
-                pstmt.setString(1,tmp[0]);
-                pstmt.setString(2,tmp[1]);
+            for (String path : odMap.keySet()) {
+                pstmt.setString(1,path);
+                pstmt.setString(2,odMap.get(path));
                 pstmt.addBatch();
+                i++;
                 if (i % 2000 == 0) {
                     pstmt.executeBatch();
                 }
@@ -270,6 +273,8 @@ public static final String password = "root";
             pstmt.close();
             System.out.println("Insert FltPlan Finished.Used time: " +
                     (System.currentTimeMillis() - start)/1000);
+        } catch (BatchUpdateException e) {
+            LOGGER.error("注册号过长");
         } catch (SQLException e) {
             e.printStackTrace();
         }

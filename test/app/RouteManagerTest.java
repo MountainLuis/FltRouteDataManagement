@@ -3,9 +3,11 @@ package app;
 import bean.PointInfo;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.*;
 
 import static org.junit.Assert.*;
 
@@ -71,6 +73,20 @@ public class RouteManagerTest {
             System.out.println(strs[i]);
         }
     }
+    @Test
+    public void testLogger() {
+        Logger logger = Logger.getLogger("chapter");
+        try {
+            FileHandler fileHandler = new FileHandler("d:\\log.txt");
+            LogRecord lr = new LogRecord(Level.INFO, "this is a test info");
+            SimpleFormatter sf = new SimpleFormatter();
+            fileHandler.setFormatter(sf);
+            logger.addHandler(fileHandler);
+            logger.log(lr);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+    }
 
 }
