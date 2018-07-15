@@ -201,8 +201,10 @@ public class DataAccessObject {
     }
     public List<FltPlan> getFltPlan() {
         List<FltPlan> plans = new ArrayList<>();
-        ResultSet rs = AccessHelper.getResultSet();
+        String table = "fme201806";
+        ResultSet rs = MysqlHelper.getResultSet(table);
         try {
+//            int i = 0;
             while (rs.next()) {
                 FltPlan fp = new FltPlan();
                 fp.flt_no = rs.getString("FLIGHTID");
@@ -217,7 +219,11 @@ public class DataAccessObject {
                     continue;
                 } else {
                     plans.add(fp);
+//                    i++;
                 }
+//                if (i == 10) {
+//                    break;
+//                }
             }
             System.out.println("读取计划完成。");
         } catch (SQLException e) {
