@@ -36,5 +36,19 @@ public class AccessHelper {
         }
         return rs;
     }
-
+    public static ResultSet getResultSet() {
+        String sql = "select * from fme ";
+        ResultSet rs = null;
+        Connection conn = getConnection();
+        if (conn == null) {
+            return  null;
+        }
+        try {
+            Statement stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rs;
+    }
 }

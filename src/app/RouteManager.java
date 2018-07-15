@@ -10,6 +10,7 @@ import java.util.*;
 public class RouteManager {
     public Map<String, List<PointInfo>> routeSeq = null;  //这个表用于存放每条城市对和它对应的所有航路点
     DataAccessObject dao = new DataAccessObject();
+
 //    public List<String> exceptOD = new ArrayList<>();
 //
 //    public static void main(String[] args) {
@@ -18,6 +19,11 @@ public class RouteManager {
 //        rm.dealWithAllSimple();
 //    }
 
+    /**
+     * 此方法将用于从飞行计划的path中提取并完成城市对航路；
+     * 只处理国外出发航班，使用数据库为route_all；飞行计划已经
+     *
+     */
 //    public void dealWithAll() {
 //        Map<String, List<List<PointInfo>>> sameOD = new HashMap<>();  //存放相同OD的不同航路
 //        routeSeq = new HashMap<>();

@@ -2,28 +2,15 @@ package app;
 
 import bean.FltPlan;
 import bean.PointInfo;
+import org.apache.log4j.Logger;
 import util.AccessHelper;
 import util.MysqlHelper;
-
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
-import java.util.logging.*;
 
 public class DataAccessObject {
-    static Logger logger = Logger.getLogger("foo");
-    static {
-        try {
-
-            FileHandler fileHandler = new FileHandler("g:\\tmp\\data\\textlog.txt");
-            SimpleFormatter sf = new SimpleFormatter();
-            fileHandler.setFormatter(sf);
-            logger.addHandler(fileHandler);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private static final Logger LOGGER = Logger.getLogger(DataAccessObject.class);
 
     public static Map<String, List<PointInfo>> routeMap = null;
     public static Map<String, List<PointInfo>> naipMap = null;
@@ -68,7 +55,7 @@ public class DataAccessObject {
      * @return
      */
     public Map<String, List<PointInfo>> getNaipData() {
-        String table2 = "route_naip_fullname";
+        String table2 = "route_naip";
         ResultSet rs = MysqlHelper.getResultSet(table2);
         Map<String, List<PointInfo>> naipRoute = new HashMap<>();
         try{
@@ -76,6 +63,7 @@ public class DataAccessObject {
                 String r = rs.getString("route");
                 PointInfo pi = new PointInfo();
                 pi.fix_pt = rs.getString("fix_pt");
+                pi.pt_name = rs.getString("pt_name");
                 pi.idx = rs.getInt("seq");
                 pi.enRoute = r;
                 if (naipRoute.keySet().contains(r)) {
@@ -130,8 +118,7 @@ public class DataAccessObject {
         }
         if (start == end) {
             String res = "航路"+ r  + "不包含点：" + startPt + " " + endPt;
-            LogRecord lr = new LogRecord(Level.INFO,res);
-            logger.log(lr);
+            LOGGER.info(res);
 //            System.out.println("End Point Error:"+ r  + " " + startPt + " " + endPt);
             return pList;
 //            System.exit(0);
@@ -151,7 +138,41 @@ public class DataAccessObject {
         }
         return  pList;
     }
-
+    public List<PointInfo> getSubPtSeq(String r, String startPt, String endPt) {
+        List<PointInfo> pList = null;
+        List<PointInfo> route = getPtSeq(r);
+        int start = 0, end = 0;
+        for (int i = 0; i < route.size(); i++) {
+            PointInfo pi = route.get(i);
+            if (pi.fix_pt.equals(startPt)) {
+                start = i;
+            }
+            if (pi.fix_pt.equals(endPt)) {
+                end = i;
+            }
+        }
+        if (start == end) {
+            String res = "航路"+ r  + "不包含点：" + startPt + " " + endPt;
+            LOGGER.info(res);
+//            System.out.println("End Point Error:"+ r  + " " + startPt + " " + endPt);
+            return pList;
+//            System.exit(0);
+        }
+        if (start +1 == end || end + 1 == start) {
+//            pList.add(route.get((start < end ? end : start)));
+            return pList;
+        }
+        if (start > end) {
+            int tmp = start;
+            start = end;
+            end = tmp;
+            pList = route.subList(start + 1,end);
+            Collections.reverse(pList);
+        } else {
+            pList = route.subList(start + 1, end);
+        }
+        return  pList;
+    }
     public List<FltPlan> getFltPlan(String time) {
         List<FltPlan> plans = new ArrayList<>();
         ResultSet rs = AccessHelper.getResultSet(time);
@@ -166,13 +187,39 @@ public class DataAccessObject {
                 fp.dep_time = rs.getString("P_DEPTIME");
                 fp.arr_time = rs.getString("P_ARRTIME");
                 fp.flt_path = rs.getString("P_ROUTE");
-                if (fp.to_ap == null || fp.ld_ap == null || fp.flt_path == null || fp.flt_path.equals("")) {
+                if (fp.to_ap == null || fp.ld_ap == null) {
                     continue;
                 } else {
                     plans.add(fp);
                 }
             }
             System.out.println("读取计划" + time + "完成。");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return plans;
+    }
+    public List<FltPlan> getFltPlan() {
+        List<FltPlan> plans = new ArrayList<>();
+        ResultSet rs = AccessHelper.getResultSet();
+        try {
+            while (rs.next()) {
+                FltPlan fp = new FltPlan();
+                fp.flt_no = rs.getString("FLIGHTID");
+                fp.regitration_num = rs.getString("P_REGISTENUM");
+                fp.acft_type = rs.getString("P_AIRCRAFTTYPE");
+                fp.to_ap = rs.getString("P_DEPAP");
+                fp.ld_ap = rs.getString("P_ARRAP");
+                fp.dep_time = rs.getString("P_DEPTIME");
+                fp.arr_time = rs.getString("P_ARRTIME");
+                fp.flt_path = rs.getString("P_ROUTE");
+                if (fp.to_ap == null || fp.ld_ap == null || fp.flt_path == "") {
+                    continue;
+                } else {
+                    plans.add(fp);
+                }
+            }
+            System.out.println("读取计划完成。");
         } catch (SQLException e) {
             e.printStackTrace();
         }
