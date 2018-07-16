@@ -8,8 +8,8 @@ public class AccessHelper {
         Connection conn = null;
         try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-            String url = "jdbc:ucanaccess://g://tmp//data//fme201806.accdb";
-//            String url = "jdbc:ucanaccess://d://test.accdb";
+//            String url = "jdbc:ucanaccess://g://tmp//data//fme201806.accdb";
+            String url = "jdbc:ucanaccess://d://data//example.accdb";
 //            String url = "jdbc:ucanaccess://g://tmp//data//test.accdb";
             conn = DriverManager.getConnection(url);
             System.out.println("Connected.");

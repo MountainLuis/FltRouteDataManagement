@@ -67,7 +67,7 @@ public class ODRouteManager {
                 if (i == tmp.length - 1) {
                     System.err.println("不能以航路作为path结尾。" + r);
                 } else {
-                    ptsOnR = dao.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]));
+//                    ptsOnR = dao.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]));
                 }
                 if (ptsOnR == null) {
                     continue;

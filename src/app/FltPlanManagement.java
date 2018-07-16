@@ -24,9 +24,9 @@ public class FltPlanManagement {
 //    }
     public static  void main(String[] args){
         FltPlanManagement fpm = new FltPlanManagement();
-        List<FltPlan> plans = orm.dao.getFltPlan();
-        plans = fpm.changePath(plans);
-        fpm.storagePlans(plans);
+//        List<FltPlan> plans = orm.dao.getFltPlan();
+//        plans = fpm.changePath(plans);
+//        fpm.storagePlans(plans);
         System.out.println("Done.");
     }
 

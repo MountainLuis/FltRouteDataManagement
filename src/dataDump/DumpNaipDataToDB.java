@@ -1,9 +1,7 @@
 package dataDump;
 
 
-import bean.RoutePoint;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-import util.MysqlHelper;
+import bean.Point;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -38,7 +36,7 @@ public class DumpNaipDataToDB {
                 continue;
             }else if (file.indexOf(pat) != -1) {
                 System.out.println(file);
-                List<RoutePoint> pList = getDataFromFile(file);
+                List<Point> pList = getDataFromFile(file);
 //                MysqlHelper.insertNaipInfoIntoDB(pList);
                 System.out.println("Insert finished." + pList.size());
                 System.out.println("Insert DB Unused.");
@@ -47,8 +45,8 @@ public class DumpNaipDataToDB {
     }
 
 
-    public List<RoutePoint> getDataFromFile(String filename) {
-        List<RoutePoint> pList = new ArrayList<>();
+    public List<Point> getDataFromFile(String filename) {
+        List<Point> pList = new ArrayList<>();
         File file = new File(filename);
         BufferedReader reader = null;
         String tmp = null;
@@ -58,7 +56,7 @@ public class DumpNaipDataToDB {
                  if (tmp.length() < 2) {
                      continue;
                  }
-                RoutePoint[] pts = dealWithString(tmp);
+                Point[] pts = dealWithString(tmp);
                 for (int i = 0; i < pts.length; i++) {
                     if (pList.contains(pts[i])) {
                         continue;
@@ -74,24 +72,24 @@ public class DumpNaipDataToDB {
         }
         return pList;
     }
-    public RoutePoint[] dealWithString(String s){
+    public Point[] dealWithString(String s){
         if (s.equals("")) {
             System.out.println("Input nothing");
         }
         String[] tmp = s.trim().split("\\s+");
-        RoutePoint[]  pts = null;
+        Point[]  pts = null;
         if (tmp.length == 7){
-            RoutePoint p1 = new RoutePoint(tmp[1],tmp[5].substring(1));
-            RoutePoint p2 = new RoutePoint(tmp[1],tmp[6].substring(1));
-            pts = new RoutePoint[]{p1, p2};
+            Point p1 = new Point(tmp[1],tmp[5].substring(1));
+            Point p2 = new Point(tmp[1],tmp[6].substring(1));
+            pts = new Point[]{p1, p2};
         } else if (tmp.length == 6) {
-            RoutePoint p1 = new RoutePoint(tmp[1],tmp[4].substring(1));
-            RoutePoint p2 = new RoutePoint(tmp[1],tmp[5].substring(1));
-            pts = new RoutePoint[]{p1, p2};
+            Point p1 = new Point(tmp[1],tmp[4].substring(1));
+            Point p2 = new Point(tmp[1],tmp[5].substring(1));
+            pts = new Point[]{p1, p2};
         } else if (tmp.length == 5) {
-            RoutePoint p1 = new RoutePoint(tmp[1],tmp[3].substring(1));
-            RoutePoint p2 = new RoutePoint(tmp[1],tmp[4].substring(1));
-            pts = new RoutePoint[]{p1, p2};
+            Point p1 = new Point(tmp[1],tmp[3].substring(1));
+            Point p2 = new Point(tmp[1],tmp[4].substring(1));
+            pts = new Point[]{p1, p2};
         } else {
             System.out.println("Check the Record:" + s);
         }

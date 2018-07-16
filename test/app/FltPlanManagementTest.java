@@ -14,11 +14,11 @@ public class FltPlanManagementTest {
         DataAccessObject dao = new DataAccessObject();
         FltPlanManagement fpm = new FltPlanManagement();
         String time = "20180605";
-        List<FltPlan> plans = dao.getFltPlan(time);
+//        List<FltPlan> plans = dao.getFltPlan(time);
 //        plans = fpm.changePaths(plans);
-        for (FltPlan p : plans) {
-            System.out.println(p.flt_no + " " + p.flt_path);
-        }
+//        for (FltPlan p : plans) {
+//            System.out.println(p.flt_no + " " + p.flt_path);
+//        }
 
     }
 
@@ -29,7 +29,7 @@ public class FltPlanManagementTest {
     @Test
     public void changePath() {
         FltPlanManagement fpm = new FltPlanManagement();
-        List<FltPlan> plans = fpm.orm.dao.getFltPlan();
+        List<FltPlan> plans = null;//fpm.orm.dao.getFltPlan();
         plans = fpm.changePath(plans);
         for (FltPlan p : plans) {
             System.out.println(p.flt_no + " " + p.flt_path);
