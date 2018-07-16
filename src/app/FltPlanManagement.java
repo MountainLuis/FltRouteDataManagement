@@ -61,7 +61,7 @@ public class FltPlanManagement {
         MysqlHelper.insertPlanTable(table, plans);
     }
     public void storagePlans(List<FltPlan> plans) {
-        String table = "plan201806_Abroad";
+        String table = "plan201706_Abroad";
         MysqlHelper.createTable(table);
         MysqlHelper.insertPlanTable(table, plans);
     }
