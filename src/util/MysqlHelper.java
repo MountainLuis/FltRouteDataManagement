@@ -2,9 +2,9 @@ package util;
 
 import app.DataAccessObject;
 import bean.FltPlan;
+import bean.Point;
 import bean.PointInfo;
-import bean.RoutePoint;
-import org.apache.log4j.Logger;
+ import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.List;
@@ -12,9 +12,10 @@ import java.util.Map;
 
 public class MysqlHelper {
     private static final Logger LOGGER = Logger.getLogger(DataAccessObject.class);
-    public static final String url = "jdbc:mysql://localhost:3306/flightplan";
-    public static final String username = "root";
-    public static final String password = "123456";
+    private static final String DB = "flightplan";
+    private static final String url = "jdbc:mysql://localhost:3306/" + DB;
+    private static final String username = "root";
+    private static final String password = "123456";
 //public static final String password = "root";
     private static Connection conn = null;
 
@@ -214,23 +215,23 @@ public class MysqlHelper {
      * 因转储结束，为避免重复插入，引用位置将此方法注释掉了。
      * @param pList
      */
-    public static void insertNaipInfoIntoDB(List<RoutePoint> pList) {
+    public static void insertNaipInfoIntoDB(List<PointInfo> pList) {
         String sql = "INSERT INTO naip_route (fix_pt, seq, route) VALUES (?,?,?)";
         Connection conn = getConnection();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             int i = 0, j = 0;
             String r = null;
-            for (RoutePoint p : pList) {
-                if (!p.route.equals(r)) {
+            for (PointInfo p : pList) {
+                if (!p.enRoute.equals(r)) {
                     i = 0;
                 }
-                pstmt.setString(1,p.pt);
+                pstmt.setString(1,p.fix_pt);
                 pstmt.setInt(2,i);
-                pstmt.setString(3,p.route);
+                pstmt.setString(3,p.enRoute);
                 pstmt.addBatch();
                 i++; j++;
-                r = p.route;
+                r = p.enRoute;
                 if (j % 2000 == 0) {
                     pstmt.executeBatch();
                 }

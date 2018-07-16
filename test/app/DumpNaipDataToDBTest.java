@@ -1,8 +1,9 @@
 package app;
 
 
-import bean.RoutePoint;
-import dataDump.DumpNaipDataToDB;
+ import bean.Point;
+ import bean.PointInfo;
+ import dataDump.DumpNaipDataToDB;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class DumpNaipDataToDBTest {
     public void getDataFromFile() {
         String filename = "D://data//PFPX-PRC-NAIP-Expansion-master//NAIP AIRWAYS A.nav";
         DumpNaipDataToDB dn = new DumpNaipDataToDB();
-        List<RoutePoint> pList = dn.getDataFromFile(filename);
+        List<Point> pList = dn.getDataFromFile(filename);
         System.out.println(pList.size());
     }
 
@@ -25,17 +26,17 @@ public class DumpNaipDataToDBTest {
         String s3 = "AWY A326  FA19005810752151+38974998+118058334+38903332+118470001          1 6P75      6KALBA ";
         String s4 = "AWY A326  FA12237579005811+39080002+117375000+38974998+118058334          1 5CG       6P75  ";
         DumpNaipDataToDB dn = new DumpNaipDataToDB();
-        RoutePoint[] leg1 = dn.dealWithString(s1);
-        RoutePoint[] leg2 = dn.dealWithString(s2);
-        RoutePoint[] leg3 = dn.dealWithString(s3);
-        RoutePoint[] leg4 = dn.dealWithString(s4);
-        System.out.println(leg1[0].route + " :" + leg1[0].pt + " " + leg1[1].pt);
-        System.out.println(leg2[0].route + " :" + leg2[0].pt + " " + leg2[1].pt);
-        System.out.println(leg3[0].route + " :" + leg3[0].pt + " " + leg3[1].pt);
-        System.out.println(leg4[0].route + " :" + leg4[0].pt + " " + leg4[1].pt);
+        Point[] leg1 = dn.dealWithString(s1);
+        Point[] leg2 = dn.dealWithString(s2);
+        Point[] leg3 = dn.dealWithString(s3);
+        Point[] leg4 = dn.dealWithString(s4);
+        System.out.println(  " :" + leg1[0].pid + " " + leg1[1].pid);
+        System.out.println(  " :" + leg2[0].pid + " " + leg2[1].pid);
+        System.out.println( " :" + leg3[0].pid + " " + leg3[1].pid);
+        System.out.println( " :" + leg4[0].pid + " " + leg4[1].pid);
 //        System.out.println(leg1[1].equals(leg2[0]));
 //        System.out.println(leg1[1].equals(leg2[1]));
-        List<RoutePoint> pList = new ArrayList<>();
+        List<Point> pList = new ArrayList<>();
         pList.add(leg1[0]);
         pList.add(leg1[1]);
 //        pList.add(leg2[0]);
