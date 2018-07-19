@@ -39,7 +39,12 @@ public class AbroadFlightSimulation extends BaseTrajectory{
 
 //    public List<AcftState> TrajectoryAcft(FltPlan fltPlan) throws IllegalRouteException {
 public Set<FixPt> TrajectoryAcft(FltPlan fltPlan) throws IllegalRouteException {
-        AcftPerformance performance = acftPerformances.get(fltPlan.acft_type);
+        AcftPerformance performance = null;
+        if (acftPerformances.containsKey(fltPlan.acft_type)) {
+            performance = acftPerformances.get(fltPlan.acft_type);
+        }else {
+            performance = acftPerformances.get("B77W");
+        }
         Route r = fpdm.routeDataServer(fltPlan.flt_path);
         List<AcftState> res = new LinkedList<>();
         Set<FixPt> pts = new HashSet<>();
@@ -64,10 +69,8 @@ public Set<FixPt> TrajectoryAcft(FltPlan fltPlan) throws IllegalRouteException {
             pts.add(pt);
             res.add(state);
         }
-
 //        return  res;
     return pts;
-
     }
 
     public AbroadFlightSimulation() throws IOException {

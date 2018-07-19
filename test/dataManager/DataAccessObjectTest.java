@@ -4,9 +4,7 @@ import bean.FltPlan;
 import bean.PointInfo;
 import org.junit.Test;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DataAccessObjectTest {
 
@@ -79,8 +77,17 @@ public class DataAccessObjectTest {
         DataAccessObject dao = new DataAccessObject();
         String table = "plan201806_abroad";
         List<FltPlan> plans = dao.getFltPlanFromMysql(table);
+        Set<String> types = new HashSet<>();
         for (FltPlan plan :plans) {
-            System.out.println(plan.flt_no);
+            if (plan.acft_type.equals("")) {
+                System.out.println("这个没机型 " + plan.flt_no);
+            }
+            types.add(plan.acft_type);
+//            System.out.println(plan.acft_type);
+        }
+        System.out.println("TYPE : " + types.size());
+        for (String type : types) {
+            System.out.println(type);
         }
     }
 

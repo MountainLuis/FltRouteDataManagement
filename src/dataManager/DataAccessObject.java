@@ -24,6 +24,10 @@ public class DataAccessObject {
         boundries = getNationalBoundries();
     }
 
+    /**
+     * 取得NAIP航路点数据
+     * @return
+     */
     private Map<String,double[]> getAllNaipPtMap() {
         String key = "MySQL";
         String table = "allpoint_naip";
@@ -42,6 +46,11 @@ public class DataAccessObject {
         }
         return allPtMap;
     }
+
+    /**
+     * 取得国境点信息
+     * @return
+     */
     public List<String> getNationalBoundries() {
         List<String> res = new ArrayList<>();
         String key = "MySQL";
@@ -312,7 +321,6 @@ public class DataAccessObject {
             return null;
         }
     }
-
     public boolean isRouteMapContainKey(String key) {
         return routeMap.containsKey(key);
     }
