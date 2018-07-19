@@ -1,7 +1,7 @@
 package apply.montecarlo;
 
-import code.bada.bean.FixPt;
-import code.bada.bean.Route;
+import bada.bean.FixPt;
+import bada.bean.Route;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

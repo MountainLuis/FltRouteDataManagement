@@ -1,8 +1,7 @@
 package util;
 
-import app.DataAccessObject;
+import dataManager.DataAccessObject;
 import bean.FltPlan;
-import bean.Point;
 import bean.PointInfo;
  import org.apache.log4j.Logger;
 

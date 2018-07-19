@@ -1,8 +1,8 @@
 package bada.impl;
 
-import code.bada.bean.AcftPerformance;
-import code.bada.core.ISAModel;
-import code.bada.core.PerformanceModel;
+import bada.bean.AcftPerformance;
+import bada.core.ISAModel;
+import bada.core.PerformanceModel;
 import org.junit.Test;
 
 import java.io.IOException;

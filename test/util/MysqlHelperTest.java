@@ -1,6 +1,6 @@
 package util;
 
-import app.DataAccessObject;
+import dataManager.DataAccessObject;
 import bean.FltPlan;
 import dataDump.DumpTxtToMySql;
 import bean.PointInfo;

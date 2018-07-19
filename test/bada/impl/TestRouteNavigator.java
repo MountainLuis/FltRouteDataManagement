@@ -1,11 +1,11 @@
 package bada.impl;
 
-import code.bada.bean.AcftState;
-import code.bada.bean.FixPt;
-import code.bada.core.Global;
-import code.bada.core.PerformanceModel;
-import code.bada.exception.IllegalRouteException;
-import code.bada.util.GeoUtil;
+import bada.bean.AcftState;
+import bada.bean.FixPt;
+import bada.core.Global;
+import bada.core.PerformanceModel;
+import bada.exception.IllegalRouteException;
+import bada.util.GeoUtil;
 import org.junit.Test;
 
 import java.io.IOException;

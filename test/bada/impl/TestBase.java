@@ -1,8 +1,8 @@
 package bada.impl;
 
-import code.bada.bean.AcftPerformance;
-import code.bada.bean.AcftState;
-import code.bada.bean.Route;
+import bada.bean.AcftPerformance;
+import bada.bean.AcftState;
+import bada.bean.Route;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

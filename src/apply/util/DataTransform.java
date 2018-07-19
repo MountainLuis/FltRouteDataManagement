@@ -1,6 +1,6 @@
 package apply.util;
 
-import code.apply.bean.FlightPlan;
+//import apply.bean.FlightPlan;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
@@ -31,15 +31,15 @@ public class DataTransform {
         result = Double.parseDouble(lonLat.substring(0, lonLat.length() - 4)) + seconds / 3600.0;
         return result;
     }
-    public static List<FlightPlan> getAcftIDFromFltPlanMap(Map<String, List<FlightPlan>> allPlans) {
-        List<FlightPlan> allFltIDs = new ArrayList<>();
-        for(String route : allPlans.keySet()) {
-            for(FlightPlan plan : allPlans.get(route)){
-                allFltIDs.add(plan);
-            }
-        }
-        return allFltIDs;
-    }
+//    public static List<FlightPlan> getAcftIDFromFltPlanMap(Map<String, List<FlightPlan>> allPlans) {
+//        List<FlightPlan> allFltIDs = new ArrayList<>();
+//        for(String route : allPlans.keySet()) {
+//            for(FlightPlan plan : allPlans.get(route)){
+//                allFltIDs.add(plan);
+//            }
+//        }
+//        return allFltIDs;
+//    }
     public static void map2json(Map<String, List<String>> linkedRoutes) {
         ObjectMapper mapper = new ObjectMapper();
         String jsonStr = null;

@@ -1,6 +1,6 @@
 package apply.util;
 
-import code.bada.bean.AcftState;
+import bada.bean.AcftState;
 
 import java.sql.*;
 import java.util.List;

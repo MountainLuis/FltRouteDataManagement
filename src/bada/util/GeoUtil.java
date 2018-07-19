@@ -1,8 +1,8 @@
 package bada.util;
 
-import code.bada.bean.AcftState;
-import code.bada.core.Global;
-import code.bada.exception.IllegalLngLatException;
+import bada.bean.AcftState;
+import bada.core.Global;
+import bada.exception.IllegalLngLatException;
 
 /**
  * 地理计算工具类。

@@ -1,8 +1,11 @@
 package bada.core;
 
-import code.bada.bean.AcftPerformance;
-import code.bada.bean.AcftState;
-import code.bada.bean.FltStage;
+import bada.bean.AcftPerformance;
+import bada.bean.AcftState;
+import bada.bean.FltStage;
+
+
+
 
 /**
  * 对应BADA Chapter3 的推力，阻力和油耗计算公式

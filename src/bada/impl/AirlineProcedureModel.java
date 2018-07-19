@@ -1,15 +1,15 @@
 package bada.impl;
 
 
-import code.bada.bean.AcftPerformance;
-import code.bada.bean.AcftState;
-import code.bada.bean.AirlineProcedure;
-import code.bada.core.Global;
-import code.bada.core.PerformanceModel;
-import code.bada.core.vintent.ConstCASVIntent;
-import code.bada.core.vintent.ConstMachVIntent;
-import code.bada.core.vintent.VIntent;
-import code.bada.core.vintent.VIntentUtil;
+import bada.bean.AcftPerformance;
+import bada.bean.AcftState;
+import bada.bean.AirlineProcedure;
+import bada.core.Global;
+import bada.core.PerformanceModel;
+import bada.core.vintent.ConstCASVIntent;
+import bada.core.vintent.ConstMachVIntent;
+import bada.core.vintent.VIntent;
+import bada.core.vintent.VIntentUtil;
 
 /**
  * 对应BADA Chatper4

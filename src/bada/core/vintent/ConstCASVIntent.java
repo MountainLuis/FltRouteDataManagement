@@ -1,10 +1,10 @@
 package bada.core.vintent;
 
 
-import code.bada.bean.AcftStateDetail;
-import code.bada.core.AtmosphereModel;
-import code.bada.core.Global;
-import code.bada.core.PerformanceModel;
+import bada.bean.AcftStateDetail;
+import bada.core.AtmosphereModel;
+import bada.core.Global;
+import bada.core.PerformanceModel;
 
 public class ConstCASVIntent implements VIntent {
 

@@ -1,14 +1,15 @@
 package bada.impl;
 
 
-import code.bada.bean.*;
-import code.bada.core.AtmosphereModel;
-import code.bada.core.BaseAcftTrajectory;
-import code.bada.core.Global;
-import code.bada.core.vintent.VIntent;
-import code.bada.exception.IllegalRouteException;
-import code.bada.util.GeoUtil;
-import code.bada.util.RouteUtil;
+import bada.core.BaseAcftTrajectory;
+import bada.bean.*;
+import bada.core.AtmosphereModel;
+import bada.core.BaseAcftTrajectory;
+import bada.core.Global;
+import bada.core.vintent.VIntent;
+import bada.exception.IllegalRouteException;
+import bada.util.GeoUtil;
+import bada.util.RouteUtil;
 
 public class AcftTrajectory extends BaseAcftTrajectory {
 

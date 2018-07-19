@@ -1,12 +1,12 @@
 package bada.core;
 
 
-import code.bada.bean.AcftPerformance;
-import code.bada.bean.AcftState;
-import code.bada.bean.AcftStateDetail;
-import code.bada.bean.FltStage;
-import code.bada.core.vintent.VIntent;
-import code.bada.util.GeoUtil;
+import bada.bean.AcftPerformance;
+import bada.bean.AcftState;
+import bada.bean.AcftStateDetail;
+import bada.bean.FltStage;
+import bada.core.vintent.VIntent;
+import bada.util.GeoUtil;
 
 /**
  * Created by dddda212 on 18-5-9.

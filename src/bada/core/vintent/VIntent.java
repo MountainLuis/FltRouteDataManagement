@@ -1,8 +1,8 @@
 package bada.core.vintent;
 
-import code.bada.bean.AcftStateDetail;
-import code.bada.core.AtmosphereModel;
-import code.bada.core.PerformanceModel;
+import bada.bean.AcftStateDetail;
+import bada.core.AtmosphereModel;
+import bada.core.PerformanceModel;
 
 /**
  * 对应BADA Chapter3 的TotalEnergyModel的计算。

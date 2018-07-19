@@ -83,5 +83,7 @@ public class FixPt {
     public void setPointSeq(int pointSeq) {
         this.pointSeq = pointSeq;
     }
-
+    public String toString() {
+        return ID + " " +longitude;
+    }
 }

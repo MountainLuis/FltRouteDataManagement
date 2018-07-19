@@ -1,7 +1,7 @@
 package bada.core;
 
-import code.bada.bean.AcftState;
-import code.bada.bean.AirInfo;
+import bada.bean.AcftState;
+import bada.bean.AirInfo;
 
 /**
  * 对应BADA Chapter3 的 AtmosphereModel

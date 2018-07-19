@@ -1,8 +1,7 @@
 package dataDump;
 
-import app.DataAccessObject;
+import dataManager.DataAccessObject;
 import bean.PointInfo;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.apache.log4j.Logger;
 
 import java.util.Collections;
@@ -14,17 +13,17 @@ public class CombineAllRoute {
     private static final Logger LOGGER = Logger.getLogger(DataAccessObject.class);
 
     DataAccessObject dao = new DataAccessObject();
-    public void conbine(){
-        Map<String, List<PointInfo>> res = new HashMap<>();
-        for (String r : dao.routeMap.keySet()) {
-            if (!dao.naipMap.containsKey(r)) {
-                res.put(r, dao.routeMap.get(r));
-            } else {
-                List<PointInfo> points = null; //todo
-                res.put(r, points);
-            }
-        }
-    }
+//    public void conbine(){
+//        Map<String, List<PointInfo>> res = new HashMap<>();
+//        for (String r : dao.routeMap.keySet()) {
+//            if (!dao.naipMap.containsKey(r)) {
+//                res.put(r, dao.routeMap.get(r));
+//            } else {
+//                List<PointInfo> points = null; //todo
+//                res.put(r, points);
+//            }
+//        }
+//    }
     public List<PointInfo> compare2List(List<PointInfo> pList1, List<PointInfo> pList2) {
         if (pList1.size() == pList2.size()) {
             if (pList1.get(0).fix_pt.equals(pList2.get(pList2.size() - 1).fix_pt)) {

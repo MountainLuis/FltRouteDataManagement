@@ -1,14 +1,14 @@
 package bada.impl;
 
-import code.bada.bean.AcftState;
-import code.bada.bean.FixPt;
-import code.bada.bean.FltPathType;
-import code.bada.bean.Route;
-import code.bada.core.Global;
-import code.bada.core.PerformanceModel;
-import code.bada.exception.IllegalRouteException;
-import code.bada.util.GeoUtil;
-import code.bada.util.RouteUtil;
+import bada.bean.AcftState;
+import bada.bean.FixPt;
+import bada.bean.FltPathType;
+import bada.bean.Route;
+import bada.core.Global;
+import bada.core.PerformanceModel;
+import bada.exception.IllegalRouteException;
+import bada.util.GeoUtil;
+import bada.util.RouteUtil;
 
 import java.util.ArrayList;
 import java.util.List;

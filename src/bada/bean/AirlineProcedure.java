@@ -1,7 +1,7 @@
 package bada.bean;
 
 
-import code.bada.core.Global;
+import bada.core.Global;
 
 public class AirlineProcedure {
 

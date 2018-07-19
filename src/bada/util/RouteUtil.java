@@ -1,8 +1,8 @@
 package bada.util;
 
-import code.bada.bean.FixPt;
-import code.bada.bean.Route;
-import code.bada.exception.IllegalRouteException;
+import bada.bean.FixPt;
+import bada.bean.Route;
+import bada.exception.IllegalRouteException;
 
 import java.util.List;
 

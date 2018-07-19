@@ -1,8 +1,8 @@
 package bada.core.vintent;
 
 
-import code.bada.bean.AcftStateDetail;
-import code.bada.core.AtmosphereModel;
+import bada.bean.AcftStateDetail;
+import bada.core.AtmosphereModel;
 
 public class VIntentUtil {
 

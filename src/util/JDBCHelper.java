@@ -1,5 +1,6 @@
 package util;
 
+import bean.AcftPtTime;
 import bean.FltPlan;
 import bean.Point;
 import bean.PointInfo;
@@ -52,7 +53,7 @@ public class JDBCHelper {
     /**
      * 创建指定的表
      * @param table 表名称
-     * @param c 表类型，p：flightplan; r：route; t ：point;
+     * @param c 表类型，p：flightplan; r：route; t ：point; y: PtTimes
      */
     public static void createTable(String table, char c) {
         String  planSql = "CREATE TABLE " + table + "(id int(10)," +
@@ -65,6 +66,9 @@ public class JDBCHelper {
         String  pointSql = "CREATE TABLE " + table + "(id int(10)," +
                 "pid varchar(10), name varchar(20), latitude double, longitude double" +
                  ")charset=utf8;";
+        String ptTimeSql = "CREATE TABLE " + table + "(id int(10)," +
+                "flt_no varchar(10), fix_pt varchar(20), time varchar(40)" +
+                ")charset=utf8;";
         switch (c) {
             case 'p':
                 create(planSql);
@@ -74,6 +78,9 @@ public class JDBCHelper {
                 break;
             case 't':
                 create(pointSql);
+                break;
+            case 'y' :
+                create(ptTimeSql);
                 break;
                 default:
                     System.out.println("表类型有误。");
@@ -168,6 +175,29 @@ public class JDBCHelper {
                 pstmt.setString(2,p.name);
                 pstmt.setDouble(3,p.latitude);
                 pstmt.setDouble(4,p.longitude);
+                pstmt.addBatch();
+                if (i % 1000 == 0){
+                    pstmt.executeBatch();
+                }
+            }
+            pstmt.executeBatch();
+            pstmt.close();
+        }  catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void insertPtTimes(String table, List<AcftPtTime> timeList) {
+        String key = "MySQL";
+        String sql = "INSERT INTO " + table + " (" +
+                "flt_no, fix_pt, time) VALUES (?,?,?)";
+        Connection conn = getConnection(key);
+            try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            for (int i = 0; i < timeList.size(); i++) {
+                AcftPtTime p = timeList.get(i);
+                pstmt.setString(1,p.flt_no);
+                pstmt.setString(2,p.fix_pt);
+                pstmt.setDouble(3,p.time);
                 pstmt.addBatch();
                 if (i % 1000 == 0){
                     pstmt.executeBatch();

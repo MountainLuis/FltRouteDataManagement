@@ -1,10 +1,10 @@
 package bada.impl;
 
-import code.bada.bean.AcftPerformance;
-import code.bada.bean.AcftState;
-import code.bada.bean.AcftStateDetail;
-import code.bada.bean.Route;
-import code.bada.exception.IllegalRouteException;
+import bada.bean.AcftPerformance;
+import bada.bean.AcftState;
+import bada.bean.AcftStateDetail;
+import bada.bean.Route;
+import bada.exception.IllegalRouteException;
 import org.junit.Test;
 
 import java.io.IOException;

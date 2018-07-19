@@ -1,8 +1,10 @@
 package bada.core;
 
 
-import code.bada.bean.AcftState;
-import code.bada.bean.AirInfo;
+import bada.bean.AcftState;
+import bada.bean.AirInfo;
+import bada.bean.AcftState;
+import bada.bean.AirInfo;
 
 /**
  * Created by dddda212 on 18-5-9.

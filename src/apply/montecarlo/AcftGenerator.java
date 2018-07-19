@@ -1,6 +1,7 @@
 package apply.montecarlo;
 
-import code.apply.bean.FlightPlan;
+//import apply.bean.FlightPlan;
+import bean.FltPlan;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,13 +15,13 @@ public class AcftGenerator {
      * @param path
      * @return
      */
-    public static List<FlightPlan> routeAcftGenerator(String path) {
-        List<FlightPlan> plans = new ArrayList();
+    public static List<FltPlan> routeAcftGenerator(String path) {
+        List<FltPlan> plans = new ArrayList();
         int index = 0;
         int time = rand.nextInt(100);
         for (int i = 0; i < 30; i++) {  //todo
-            FlightPlan plan = acftPlanGenerator(path, time, index++);
-            plans.add(plan);
+//            FltPlan plan = acftPlanGenerator(path, time, index++);
+//            plans.add(plan);
             time += getPossionVariable(300);  //todo
          }
          return plans;
@@ -33,16 +34,16 @@ public class AcftGenerator {
      * @param index
      * @return
      */
-    public static FlightPlan acftPlanGenerator(String path, int time, int index) {
-        FlightPlan plan = new FlightPlan();
-        plan.setFltID(path + "-" + index);
-        plan.setAcftType(acftTypeGenerator());
-        plan.setToTime(time);
-        plan.setFltPath(path);
-        plan.setSidPath(null);
-        plan.setStarPath(null);
-        return plan;
-    }
+//    public static FlightPlan acftPlanGenerator(String path, int time, int index) {
+//        FlightPlan plan = new FlightPlan();
+//        plan.setFltID(path + "-" + index);
+//        plan.setAcftType(acftTypeGenerator());
+//        plan.setToTime(time);
+//        plan.setFltPath(path);
+//        plan.setSidPath(null);
+//        plan.setStarPath(null);
+//        return plan;
+//    }
     /**
      * 按概率生成不同机型
      */
