@@ -21,11 +21,13 @@ public class FlightPlanDataManagement {
     DataAccessObject dao = new DataAccessObject();
 
     public List<FltPlan> getFltPlan() {
+        List<FltPlan> res = new ArrayList<>();
         String planTable = "plan201806_abroad";
         List<FltPlan> planList = dao.getFltPlanFromMysql(planTable);
+        for (FltPlan plan : planList){
+        }
         return planList;
     }
-
 
     public Route routeDataServer(String p) {
         String[] pts = p.split("-");

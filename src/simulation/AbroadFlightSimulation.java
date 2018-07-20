@@ -18,7 +18,7 @@ public class AbroadFlightSimulation extends BaseTrajectory{
     List<AcftPtTime> ptTimes = new ArrayList<>();
 
 
-    public static  void main(String[] args) throws IOException, IllegalRouteException {
+    public static  void main(String[] args) throws IOException{
         AbroadFlightSimulation afs = new AbroadFlightSimulation();
         afs.dealWithAllData();
         System.out.println(afs.ptTimes.size());
