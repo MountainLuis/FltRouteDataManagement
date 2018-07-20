@@ -5,12 +5,15 @@ import bada.exception.IllegalRouteException;
 import bada.impl.AcftTrajectory;
 import bean.AcftPtTime;
 import bean.FltPlan;
+import dataManager.DataAccessObject;
+import org.apache.log4j.Logger;
 import util.JDBCHelper;
 
 import java.io.IOException;
 import java.util.*;
 
 public class AbroadFlightSimulation extends BaseTrajectory{
+    private static final Logger LOGGER = Logger.getLogger(AbroadFlightSimulation.class);
     FlightPlanDataManagement fpdm = new FlightPlanDataManagement();
     List<AcftPtTime> ptTimes = new ArrayList<>();
 
@@ -28,12 +31,21 @@ public class AbroadFlightSimulation extends BaseTrajectory{
     }
 
 
-    public void dealWithAllData() throws IllegalRouteException {
+    public void dealWithAllData(){
         List<FltPlan> planList = fpdm.getFltPlan();
         System.out.println("plans: " + planList.size());
-        for (FltPlan plan : planList) {
-            TrajectoryAcft(plan);
-        }
+
+            for (FltPlan plan : planList) {
+                try {
+                    Set<FixPt> res = TrajectoryAcft(plan);
+                }catch (IllegalRouteException e) {
+                    LOGGER.error(plan.toString() + " 航路上没有足够多的点。");
+//                    System.out.println(plan.toString());
+                    continue;
+                }
+            }
+
+
     }
 
 
@@ -46,6 +58,9 @@ public Set<FixPt> TrajectoryAcft(FltPlan fltPlan) throws IllegalRouteException {
             performance = acftPerformances.get("B77W");
         }
         Route r = fpdm.routeDataServer(fltPlan.flt_path);
+        if (r == null || r.enRoute.isEmpty()) {
+            return  null;
+        }
         List<AcftState> res = new LinkedList<>();
         Set<FixPt> pts = new HashSet<>();
         AcftTrajectory trajectory = new AcftTrajectory(performance);

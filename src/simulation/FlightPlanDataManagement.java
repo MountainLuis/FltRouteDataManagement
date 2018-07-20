@@ -43,8 +43,12 @@ public class FlightPlanDataManagement {
             enRoute.add(fp);
         }
         Route r = new Route();
-        r.enRoute = enRoute;
-        return  r;
+        if (enRoute == null || enRoute.isEmpty()) {
+            return null;
+        } else {
+            r.enRoute = enRoute;
+            return r;
+        }
     }
 
 }

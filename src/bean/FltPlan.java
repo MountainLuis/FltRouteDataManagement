@@ -19,6 +19,6 @@ public class FltPlan {
     }
     @Override
     public String toString() {
-        return flt_no + "-" + to_ap + "-" + ld_ap;
+        return flt_no + "-" + to_ap + "-" + ld_ap + "-" + dep_time;
     }
 }
