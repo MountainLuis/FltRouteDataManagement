@@ -23,6 +23,13 @@ public class JDBCHelper {
         }
         return conn;
     }
+
+    /**
+     * 使用表名称取得数据库数据，全部取得；
+     * @param table
+     * @param key
+     * @return
+     */
     public static ResultSet getResultSet(String table, String key){
          String sql = "select * from " + table ;
         ResultSet rs = null;
@@ -37,6 +44,13 @@ public class JDBCHelper {
         }
         return rs;
     }
+
+    /**
+     * 使用sql语句取得数据库中数据；
+     * @param sql
+     * @param key
+     * @return
+     */
     public static ResultSet getResultSetWithSql(String sql, String key) {
         ResultSet rs = null;
         Connection conn = getConnection(key);
@@ -53,7 +67,7 @@ public class JDBCHelper {
     /**
      * 创建指定的表
      * @param table 表名称
-     * @param c 表类型，p：flightplan; r：route; t ：point; y: PtTimes
+     * @param c 表类型，p：flightplan; r：route; t ：point; y: PtTimes; c :standard flight plan
      */
     public static void createTable(String table, char c) {
         String  planSql = "CREATE TABLE " + table + "(id int(10)," +
@@ -67,7 +81,15 @@ public class JDBCHelper {
                 "pid varchar(10), name varchar(20), latitude double, longitude double" +
                  ")charset=utf8;";
         String ptTimeSql = "CREATE TABLE " + table + "(id int(10)," +
-                "flt_no varchar(10), fix_pt varchar(20), time varchar(40)" +
+                "flt_no varchar(10), fix_pt varchar(20), time varchar(40), reg_num varchar(40), dep_time varchar(40)" +
+                ")charset=utf8;";
+        String  fltPlanSql = "CREATE TABLE " + table + " (ID int(10)," +
+                "FLT_NO varchar(10), REGISTRA_NUM varchar(255), ACFT_TYPE varchar(20)," +
+                "ACFT_CLASS varchar(20)," +
+                "TO_AIP varchar(20), LD_AIP varchar(10),APPEAR_TIME varchar(20), " +
+                "START_POINT varchar(20), END_POINT varchar(20), " +
+                "FLT_PATH longtext, " +
+                "SID_PATH varchar(40), STAR_PATH varchar(40), TO_RUNWAY varchar(20), LD_RUNWAY varchar(20)" +
                 ")charset=utf8;";
         switch (c) {
             case 'p':
@@ -81,6 +103,9 @@ public class JDBCHelper {
                 break;
             case 'y' :
                 create(ptTimeSql);
+                break;
+            case 's':
+                create(fltPlanSql);
                 break;
                 default:
                     System.out.println("表类型有误。");
@@ -103,7 +128,7 @@ public class JDBCHelper {
     }
 
     /**
-     *
+     * 按处理后的Flightplan格式插入数据库
      * @param tableName
      * @param plans
      */
@@ -136,6 +161,46 @@ public class JDBCHelper {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 按Standard格式的FlightPlan插入数据库
+     * @param tableName
+     * @param plans
+     */
+    public static void insertStandardFltPlanList(String tableName, List<FltPlan> plans) {
+        String key = "MySQL";
+        String sql = "INSERT INTO " + tableName + " (" +
+                "FLT_NO, REGISTRA_NUM, ACFT_TYPE, TO_AIP, LD_AIP, APPEAR_TIME, FLT_PATH)" +
+                "VALUES (?,?,?,?,?,?,?)";
+        Connection conn = getConnection(key);
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            for (int i = 0; i < plans.size(); i++) {
+                FltPlan p = plans.get(i);
+                pstmt.setString(1,p.flt_no);
+                pstmt.setString(2,p.regitration_num);
+                pstmt.setString(3,p.acft_type);
+                pstmt.setString(4,p.to_ap);
+                pstmt.setString(5,p.ld_ap);
+                pstmt.setString(6,p.dep_time);
+                pstmt.setString(7,p.flt_path);
+                pstmt.addBatch();
+                if (i % 1000 == 0){
+                    pstmt.executeBatch();
+                }
+            }
+            pstmt.executeBatch();
+            pstmt.close();
+        }  catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 向数据库中插入航路信息，可用于航路、OD
+     * @param tablename
+     * @param pathMap
+     */
     public static void insertFltRouteMap(String tablename, Map<String, List<PointInfo>> pathMap) {
         String key = "MySQL";
         String sql = "insert into " + tablename + "(fix_pt, seq, path) values (?,?,?)";
@@ -162,6 +227,12 @@ public class JDBCHelper {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 向数据库中插入航路点信息，包括点ID、名称、经纬度
+     * @param tableName
+     * @param pointList
+     */
     public static void insertPointList(String tableName, List<Point> pointList) {
         String key = "MySQL";
         String sql = "INSERT INTO " + tableName + " (" +
@@ -186,10 +257,16 @@ public class JDBCHelper {
             e.printStackTrace();
         }
     }
+
+    /**
+     *  向数据库中插入航班过点时间
+     * @param table
+     * @param timeList
+     */
     public static void insertPtTimes(String table, List<AcftPtTime> timeList) {
         String key = "MySQL";
         String sql = "INSERT INTO " + table + " (" +
-                "flt_no, fix_pt, time) VALUES (?,?,?)";
+                "flt_no, fix_pt, time, reg_num, dep_time) VALUES (?,?,?,?,?)";
         Connection conn = getConnection(key);
             try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -198,6 +275,8 @@ public class JDBCHelper {
                 pstmt.setString(1,p.flt_no);
                 pstmt.setString(2,p.fix_pt);
                 pstmt.setDouble(3,p.time);
+                pstmt.setString(4,p.reg_num);
+                pstmt.setString(5,p.dep_time);
                 pstmt.addBatch();
                 if (i % 1000 == 0){
                     pstmt.executeBatch();

@@ -180,7 +180,7 @@ public class DataAccessObject {
     }
 
     /**
-     *
+     * 取得指定航路上起止点为给定点的航路点序列
      * @param r
      * @param startPt
      * @param endPt
@@ -269,7 +269,74 @@ public class DataAccessObject {
     }
 
     /**
-     * 从MySQL中取得航班计划
+     * 从MySQL数据库中取出指定时间的飞行计划
+     * @param time
+     * @return
+     */
+    public List<FltPlan> getSelectedFltPlan(String table,String time) {
+        String key = "MySQL";
+        String sql = "select * from " + table +" where P_DEPTIME like '" + time + "%'";
+        List<FltPlan> plans = new ArrayList<>();
+        ResultSet rs = JDBCHelper.getResultSetWithSql(sql, key);
+        try {
+            while (rs.next()) {
+                FltPlan fp = new FltPlan();
+                fp.flt_no = rs.getString("FLIGHTID");
+                fp.regitration_num = rs.getString("P_REGISTENUM");
+                fp.acft_type = rs.getString("P_AIRCRAFTTYPE");
+                fp.to_ap = rs.getString("P_DEPAP");
+                fp.ld_ap = rs.getString("P_ARRAP");
+                fp.dep_time = rs.getString("P_DEPTIME");
+                fp.arr_time = rs.getString("P_ARRTIME");
+                fp.flt_path = rs.getString("P_ROUTE");
+                if (fp.to_ap == null || fp.ld_ap == null) {
+                    continue;
+                } else {
+                    plans.add(fp);
+                }
+            }
+            System.out.println("读取计划完成。");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return plans;
+    }
+
+    /**
+     * 从MySQL取出所有航班计划，源格式为Standard;
+     * @param table
+     * @return
+     */
+    public List<FltPlan> getStandardFltPlanFromMySQL(String table) {
+        String key = "MySQL";
+        String sql = "select * from " + table;
+        List<FltPlan> plans = new ArrayList<>();
+        ResultSet rs = JDBCHelper.getResultSetWithSql(sql, key);
+        try {
+            while (rs.next()) {
+                FltPlan fp = new FltPlan();
+                fp.flt_no = rs.getString("FLIGHTID");
+                fp.regitration_num = rs.getString("P_REGISTENUM");
+                fp.acft_type = rs.getString("P_AIRCRAFTTYPE");
+                fp.to_ap = rs.getString("P_DEPAP");
+                fp.ld_ap = rs.getString("P_ARRAP");
+                fp.dep_time = rs.getString("P_DEPTIME");
+                fp.arr_time = rs.getString("P_ARRTIME");
+                fp.flt_path = rs.getString("P_ROUTE");
+                if (fp.to_ap == null || fp.ld_ap == null) {
+                    continue;
+                } else {
+                    plans.add(fp);
+                }
+            }
+            System.out.println("读取计划完成。");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return plans;
+    }
+    /**
+     * 从MySQL中取得航班计划,原格式为处理过的计划；
      * @param table
      * @return
      */
@@ -330,4 +397,17 @@ public class DataAccessObject {
     public boolean isBoundriesContainPoint(String p) {
         return boundries.contains(p);
     }
+
+    /**
+     *将飞行计划插入数据库中，按照Standard格式。
+     * @param table
+     * @param planList
+     * @return
+     */
+    public String storageFltPlan(String table, List<FltPlan> planList) {
+        JDBCHelper.createTable(table, 'c');
+        JDBCHelper.insertStandardFltPlanList(table, planList);
+        return "Insert finished.";
+    }
+
 }
