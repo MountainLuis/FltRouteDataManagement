@@ -1,6 +1,7 @@
 package dataManager;
 
 import bean.FltPlan;
+import bean.Point;
 import bean.PointInfo;
 
 import org.apache.log4j.Logger;
@@ -16,6 +17,7 @@ public class DataAccessObject {
     private static Map<String, double[]> allPtMap = null;
     private static Map<String, double[]> allNaipPtMap = null;
     private static List<String> boundries = null;
+
     public DataAccessObject() {
         routeMap = getRouteData();
         naipMap = getNaipData();
@@ -28,14 +30,16 @@ public class DataAccessObject {
      * 取得NAIP航路点数据
      * @return
      */
-    private Map<String,double[]> getAllNaipPtMap() {
+    public Map<String,double[]> getAllNaipPtMap() {
         String key = "MySQL";
         String table = "allpoint_naip";
+//        String table = "route_naip_test";
         Map<String, double[]> allPtMap = new HashMap<>();
         ResultSet rs = JDBCHelper.getResultSet(table, key);
         try {
             while (rs.next()) {
                 String pt = rs.getString("pid");
+//                String pt = rs.getString("fix_pt");
                 double lat = rs.getDouble("latitude");
                 double lng = rs.getDouble("longitude");
                 double[] res = {lat,lng};
@@ -46,7 +50,6 @@ public class DataAccessObject {
         }
         return allPtMap;
     }
-
     /**
      * 取得国境点信息
      * @return
@@ -66,7 +69,6 @@ public class DataAccessObject {
         }
         return res;
     }
-
     /**
      * 获取国际航路数据
      * @return
@@ -112,7 +114,6 @@ public class DataAccessObject {
                 String r = rs.getString("route");
                 PointInfo pi = new PointInfo();
                 pi.fix_pt = rs.getString("fix_pt");
-                pi.pt_name = rs.getString("pt_name");
                 pi.idx = rs.getInt("seq");
                 pi.enRoute = r;
                 if (naipRoute.keySet().contains(r)) {
@@ -130,7 +131,6 @@ public class DataAccessObject {
         }
         return naipRoute;
     }
-
     /**
      * 从allPoint取得所有点的坐标；
      * @return
@@ -178,7 +178,6 @@ public class DataAccessObject {
         }
         return naipMap.get(r);
     }
-
     /**
      * 取得指定航路上起止点为给定点的航路点序列
      * @param r
@@ -188,12 +187,11 @@ public class DataAccessObject {
      * @return
      */
     public List<PointInfo> getSubPtSeq(String r, String startPt, String endPt, int abroad) {
-        List<PointInfo> pList = null;  //result
-        List<PointInfo> route = null;
         if (startPt.equals(endPt)) {
-         LOGGER.error("航段首末点不能是同一个点：" + r + " " + startPt);
-         return pList;
+         LOGGER.debug("航段首末点不能是同一个点：" + r + " " + startPt);
+         return new ArrayList<>();
         }
+        List<PointInfo> route = null;
         switch (abroad) {
             case 0:
                 route = getPtSeqNaip(r);
@@ -214,26 +212,29 @@ public class DataAccessObject {
                 end = i;
             }
         }
-        if (start == -1 || end == -1) {
-            LOGGER.info( "航路"+ r  + "不包含点：" + startPt + " : " + endPt);
-            return pList;
+        if (start == -1) {
+            LOGGER.error( "航路"+ r  + "不包含点：" + startPt );
+            return null;
+        }
+        if ( end == -1){
+            LOGGER.error( "航路"+ r  + "不包含点：" + startPt );
+            return null;
         }
         if (start +1 == end || end + 1 == start) {
-            LOGGER.info(r + "航路上两点相邻" + startPt + " " + endPt);
-            return pList;
+//            LOGGER.info(r + "航路上两点相邻" + startPt + " " + endPt);
+            return new ArrayList<>();
         }
         if (start > end) {
             int tmp = start;
             start = end;
             end = tmp;
-            pList = route.subList(start + 1,end);
+            List<PointInfo> pList = route.subList(start + 1,end);
             Collections.reverse(pList);
+            return pList;
         } else {
-            pList = route.subList(start + 1, end);
+            return route.subList(start + 1, end);
         }
-        return  pList;
-    }
-
+     }
     /**
      * 从Access数据库中取得航班计划
       * @return
@@ -267,15 +268,20 @@ public class DataAccessObject {
         }
         return plans;
     }
-
     /**
      * 从MySQL数据库中取出指定时间的飞行计划
+     * 数据库字段格式按Access数据库的。
      * @param time
      * @return
      */
     public List<FltPlan> getSelectedFltPlan(String table,String time) {
         String key = "MySQL";
-        String sql = "select * from " + table +" where P_DEPTIME like '" + time + "%'";
+        String sql = null;
+        if(time.equals("")) {
+            sql = "select * from " + table;
+        } else {
+            sql = "select * from " + table + " where P_DEPTIME like '" + time + "%'";
+        }
         List<FltPlan> plans = new ArrayList<>();
         ResultSet rs = JDBCHelper.getResultSetWithSql(sql, key);
         try {
@@ -301,28 +307,32 @@ public class DataAccessObject {
         }
         return plans;
     }
-
     /**
      * 从MySQL取出所有航班计划，源格式为Standard;
+     * 数据库字段按照标准；
      * @param table
      * @return
      */
-    public List<FltPlan> getStandardFltPlanFromMySQL(String table) {
+    public List<FltPlan> getStandardFltPlanFromMySQL(String table, String time) {
         String key = "MySQL";
-        String sql = "select * from " + table;
+        String sql = null;
+        if (time.equals("")){
+            sql = "select * from " + table;
+        } else {
+            sql = "select * from " + table + " where P_DEPTIME like '" + time + "%'";
+        }
         List<FltPlan> plans = new ArrayList<>();
         ResultSet rs = JDBCHelper.getResultSetWithSql(sql, key);
         try {
             while (rs.next()) {
                 FltPlan fp = new FltPlan();
-                fp.flt_no = rs.getString("FLIGHTID");
-                fp.regitration_num = rs.getString("P_REGISTENUM");
-                fp.acft_type = rs.getString("P_AIRCRAFTTYPE");
-                fp.to_ap = rs.getString("P_DEPAP");
-                fp.ld_ap = rs.getString("P_ARRAP");
-                fp.dep_time = rs.getString("P_DEPTIME");
-                fp.arr_time = rs.getString("P_ARRTIME");
-                fp.flt_path = rs.getString("P_ROUTE");
+                fp.flt_no = rs.getString("FLT_NO");
+                fp.regitration_num = rs.getString("REGISTRA_NUM");
+                fp.acft_type = rs.getString("ACFT_TYPE");
+                fp.to_ap = rs.getString("TO_AIP");
+                fp.ld_ap = rs.getString("LD_AIP");
+                fp.dep_time = rs.getString("APPEAR_TIME");
+                fp.flt_path = rs.getString("FLT_PATH");
                 if (fp.to_ap == null || fp.ld_ap == null) {
                     continue;
                 } else {
@@ -371,7 +381,6 @@ public class DataAccessObject {
         }
         return plans;
     }
-
     /**
      * 取得指定航路点的经纬度
      * @param id
@@ -388,12 +397,44 @@ public class DataAccessObject {
             return null;
         }
     }
+    /**
+     *
+     */
+    public Point getNaipPoint(String id) {
+        Point p = new Point();
+        if (isNaipPoints(id)) {
+            double[] coord = allNaipPtMap.get(id);
+            p.pid = id;
+            p.latitude = coord[0];
+            p.longitude = coord[1];
+        } else {
+         p.pid = "";
+        }
+        return p;
+    }
+    /**
+     * 国际航路Map是否包含给定字符串
+     * @param key
+     * @return
+     */
     public boolean isRouteMapContainKey(String key) {
         return routeMap.containsKey(key);
     }
+
+    /**
+     * NAIP 航路是否包含给定字符串
+     * @param key
+     * @return
+     */
     public boolean isNaipMapContainKey(String key) {
         return naipMap.containsKey(key);
     }
+
+    /**
+     * 判断给定点是否国境点
+     * @param p
+     * @return
+     */
     public boolean isBoundriesContainPoint(String p) {
         return boundries.contains(p);
     }
@@ -405,9 +446,17 @@ public class DataAccessObject {
      * @return
      */
     public String storageFltPlan(String table, List<FltPlan> planList) {
-        JDBCHelper.createTable(table, 'c');
+        JDBCHelper.createTable(table, 's');
         JDBCHelper.insertStandardFltPlanList(table, planList);
         return "Insert finished.";
     }
 
+    /**
+     * 判断给定点是否在NAIP中有对应点。
+     * @param p
+     * @return
+     */
+    public boolean isNaipPoints(String p){
+        return allNaipPtMap.containsKey(p);
+    }
 }

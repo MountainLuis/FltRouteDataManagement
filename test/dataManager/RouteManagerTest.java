@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.logging.*;
 
 public class RouteManagerTest {
@@ -13,24 +14,12 @@ public class RouteManagerTest {
     @Test
     public void splitRoute() {
         RouteManager rm = new RouteManager();
-        String s = "KAMDA W129 OBLIK A461 LIG/K0888S1130 R473  NNX/K0895S1100 R473 WYN W18 NLG/K0890S1130 W18 " +
-                "TAMOT/N0481F370  B330 CH DCT GRUPA/N0484F360 V5 SABNO/N0493F330 A583  MAVRA/N0481F370 A583 AKOTA " +
-                "M754 VINIK/M082F370 M522  NODIN/N0479F370 M522 MAMOK/N0480F360 M522 ELANG/N0484F350 M522  GALKO GALKO3D";
-        String ss = "DCT ANTRI DCT PATMA W12 PCA G221 ASUKU/N0460F370 G221 BUNTA A1 IKELA P901 IDOSI DCT ENVAR " +
-                "M750 ANLOT B1 APU DCT DRAKE Q11 WP900 L4 LIPLO Y741 ATOTI Y722 SAMLO/N0453F390 Y722 OLMEN DCT";
-        String sss = "DCT TOPAX Y579 CJU Z82 PANSI Y711 MUGUS Y742 SALMI Q11  GID B591 HCN G86 KAPLI " +
-                "DCT RAMUS DCT ARROW DCT IDOSI/M078F320  P901 IKELA/N0475F300 A1 BUNTA/M078F300 A1 DAN DCT";
-        String s1 = "YIN A461 ZHO/K0865S0920 B208 PADNO H150 BISAL W175 TYN";
-        String s2 = " NOPIK1L NOPIK Y697 AGAVO/K0910S0980 G597 DONVO A326  LADIX B339 ASILA/K0905S0980 B339 " +
-                "POLHO/K0901S0980 Y345 UDA A575  DARNO/K0888F340 P982 PELEK/K0886F360 P982 GIKES/K0894F380 P982" +
-                "  LIKNU R815 BIKRO N869 RATIN/K0913F380 N869 VTB L999 PINUG T52  RAVOK";
-        String s3 = " NOBER W21 CMP R474 TEBAK/K0871S0950 R474 WUY R343 LKO A461 P385/K0825S0950 A461 HG W81 BOBAK";
-        String s4 = "DYG W138 LLC H24 P25 H17 BZ/K0844S0780 R596  SULEM/N0448F240 R596 BERBA/N0464F260 B576 BAKER BK1A";
-//        List<PointInfo> pList = rm.splitRoute(s1);
+        String s = " DCT BEACH Y50 DARTS Y60 ONIKU A593 LAMEN/K0889S1040 A593   PUD A599 PLT/K0900S0780 W19 MABAG W44 IGONO DCT";
+        List<PointInfo> pList = rm.splitRoute(s,1);
         System.out.println("========================================================");
-//        for (PointInfo pi : pList) {
-//            System.out.println(pi.fix_pt + " " + pi.height_cons);
-//        }
+        for (PointInfo pi : pList) {
+            System.out.println(pi.fix_pt + " " + pi.height_cons);
+        }
 
 
     }

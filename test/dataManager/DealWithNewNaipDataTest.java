@@ -22,7 +22,7 @@ public class DealWithNewNaipDataTest {
     @Test
     public void getRelationInfo() {
         DealWithNewNaipData dnn = new DealWithNewNaipData();
-        Map<String , List<String>> routeRelation = dnn.getRelationInfo();
+//        Map<String , List<String>> routeRelation = dnn.getRelationInfo();
 //        for (String s : routeRelation.keySet()) {
 //            System.out.print(s + " : ");
 //            for (String leg : routeRelation.get(s)) {
@@ -31,18 +31,18 @@ public class DealWithNewNaipDataTest {
 //            System.out.println();
 //        }
         String r = "14594";
-        for (String leg : routeRelation.get(r)) {
-            System.out.println(leg);
-        }
+//        for (String leg : routeRelation.get(r)) {
+//            System.out.println(leg);
+//        }
     }
 
     @Test
     public void getRouteLegInfo() {
         DealWithNewNaipData dnn = new DealWithNewNaipData();
-        Map<String, String[]> legs = dnn.getRouteLegInfo();
-        for (String leg : legs.keySet()) {
-            System.out.println(leg + " " + legs.get(leg)[0] + ":" + legs.get(leg)[1]);
-        }
+//        Map<String, String[]> legs = dnn.getRouteLegInfo();
+//        for (String leg : legs.keySet()) {
+//            System.out.println(leg + " " + legs.get(leg)[0] + ":" + legs.get(leg)[1]);
+//        }
 
     }
 
@@ -56,10 +56,10 @@ public class DealWithNewNaipDataTest {
         legs.add("13710");
         legs.add("16155");
         legs.add("16156");
-        List<Point> res = dnn.spliceRouteLeg(legs);
-        for (Point s : res) {
-            System.out.println(s);
-        }
+//        List<Point> res = dnn.spliceRouteLeg(legs);
+//        for (Point s : res) {
+//            System.out.println(s);
+//        }
 
     }
 

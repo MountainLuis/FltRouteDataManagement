@@ -11,7 +11,7 @@ import java.util.Map;
  * 此程序用在DealWithNewNAIPData程序中，用于读写一个新的数据库。
  */
 public class MysqlHelperNew {
-    public static final String url = "jdbc:mysql://localhost:3306/test";
+    public static final String url = "jdbc:mysql://localhost:3306/airspace_2018";
     public static final String username = "root";
     public static final String password = "123456";
     private static Connection conn = null;

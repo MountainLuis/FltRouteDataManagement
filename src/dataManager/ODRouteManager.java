@@ -13,26 +13,27 @@ import java.util.Map;
 public class ODRouteManager {
     DataAccessObject dao = new DataAccessObject();
 
-    public void dealWithAllPlans() {
-        Map<String, String> odMap = new HashMap<>();
-        String sql = "select * from tmp_201806";
-        ResultSet rs = MysqlHelper.getResultSet(sql);
-        try {
-            while (rs.next()) {
-                String path = rs.getString("P_ROUTE");
-                if (!path.equals("")) {
-                    String od = rs.getString("P_DEPAP") + "-" + rs.getString("P_ARRAP");
-                    String pStr = addToString(splitRoute(path));
-                    odMap.put(pStr, od);
-                } else {
-                    continue;
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        MysqlHelper.insertIntoSimplePathWithStringArrayList(odMap);
-    }
+//    public void dealWithAllPlans() {
+//        Map<String, String> odMap = new HashMap<>();
+//        String sql = "select * from tmp_201806";
+//
+//        ResultSet rs = MysqlHelper.getResultSet(sql);
+//        try {
+//            while (rs.next()) {
+//                String path = rs.getString("P_ROUTE");
+//                if (!path.equals("")) {
+//                    String od = rs.getString("P_DEPAP") + "-" + rs.getString("P_ARRAP");
+//                    String pStr = addToString(splitRoute(path));
+//                    odMap.put(pStr, od);
+//                } else {
+//                    continue;
+//                }
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        MysqlHelper.insertIntoSimplePathWithStringArrayList(odMap);
+//    }
     public String addToString(List<PointInfo> pList){
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < pList.size(); i++) {
@@ -67,7 +68,7 @@ public class ODRouteManager {
                 if (i == tmp.length - 1) {
                     System.err.println("不能以航路作为path结尾。" + r);
                 } else {
-//                    ptsOnR = dao.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]));
+                    ptsOnR = dao.getSubPtSeq(tmp[i], splitPointName(tmp[i - 1]), splitPointName(tmp[i + 1]),1);
                 }
                 if (ptsOnR == null) {
                     continue;

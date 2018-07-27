@@ -8,8 +8,10 @@ import java.util.List;
 public class FlightPlanManagement {
     DataAccessObject dao = new DataAccessObject();
 
+
+
     public List<FltPlan> getFltPlan(String time) {
-       String table = "fme201706_copy";
+       String table = "fme201806_copy";
        List<FltPlan> fltPlanList = dao.getSelectedFltPlan(table, time);
        return fltPlanList;
     }

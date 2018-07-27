@@ -6,9 +6,12 @@ import util.JDBCHelper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DumpNaipPoints {
+    String[] rePoints = new String[]{"DO","CH","UF","HG","RL","G","YU","PA","CD","QM","WB","KM","FK","FY"};
+    public List<String> repeatpoints = Arrays.asList(rePoints);
     public static void main(String[] args) {
         DumpNaipPoints dnp = new DumpNaipPoints();
         List<Point> pointList = dnp.getNaipData();
@@ -32,6 +35,9 @@ public class DumpNaipPoints {
                 } else {
                     p.pid = id;
                     p.name = name;
+                }
+                if (repeatpoints.contains(p.pid)) {
+                    p.pid = p.pid + "_" + name;
                 }
                 pointList.add(p);
             }

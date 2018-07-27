@@ -67,24 +67,24 @@ public class JDBCHelper {
     /**
      * 创建指定的表
      * @param table 表名称
-     * @param c 表类型，p：flightplan; r：route; t ：point; y: PtTimes; c :standard flight plan
+     * @param c 表类型，p：flightplan; r：route; t ：point; y: PtTimes; s :standard flight plan
      */
     public static void createTable(String table, char c) {
-        String  planSql = "CREATE TABLE " + table + "(id int(10)," +
+        String  planSql = "CREATE TABLE " + table + "(id int primary key auto_increment," +
                 "flt_no varchar(10), registration_num varchar(255), acft_type varchar(20)," +
                 "to_ap varchar(10), ld_ap varchar(10),dep_time varchar(20),arr_time varchar(20), flt_path longtext" +
                 ")charset=utf8;";
-        String  routeSql = "CREATE TABLE " + table + "(id int(10)," +
-                "fix_pt varchar(10), seq int(10), path varchar(20)" +
+        String  routeSql = "CREATE TABLE " + table + "(id int primary key auto_increment," +
+                "fix_pt varchar(40), longitude double,latitude double,  route varchar(20),seq int(10)" +
                  ")charset=utf8;";
-        String  pointSql = "CREATE TABLE " + table + "(id int(10)," +
-                "pid varchar(10), name varchar(20), latitude double, longitude double" +
+        String  pointSql = "CREATE TABLE " + table + "(id int primary key auto_increment," +
+                "pid varchar(20), name varchar(20), latitude double, longitude double" +
                  ")charset=utf8;";
-        String ptTimeSql = "CREATE TABLE " + table + "(id int(10)," +
+        String ptTimeSql = "CREATE TABLE " + table + "(id int primary key auto_increment," +
                 "flt_no varchar(10), fix_pt varchar(20), time varchar(40), reg_num varchar(40), dep_time varchar(40)" +
                 ")charset=utf8;";
-        String  fltPlanSql = "CREATE TABLE " + table + " (ID int(10)," +
-                "FLT_NO varchar(10), REGISTRA_NUM varchar(255), ACFT_TYPE varchar(20)," +
+        String  fltPlanSql = "CREATE TABLE " + table + " (ID int primary key auto_increment," +
+                "FLT_NO varchar(40), REGISTRA_NUM varchar(255), ACFT_TYPE varchar(20)," +
                 "ACFT_CLASS varchar(20)," +
                 "TO_AIP varchar(20), LD_AIP varchar(10),APPEAR_TIME varchar(20), " +
                 "START_POINT varchar(20), END_POINT varchar(20), " +
@@ -112,7 +112,7 @@ public class JDBCHelper {
         }
 
     }
-    private static void create(String sql) {
+    public static void create(String sql) {
         String key = "MySQL";
         Connection conn = getConnection(key);
         try {
@@ -174,6 +174,7 @@ public class JDBCHelper {
                 "VALUES (?,?,?,?,?,?,?)";
         Connection conn = getConnection(key);
         try {
+            conn.setAutoCommit(false);
             PreparedStatement pstmt = conn.prepareStatement(sql);
             for (int i = 0; i < plans.size(); i++) {
                 FltPlan p = plans.get(i);
@@ -187,15 +188,47 @@ public class JDBCHelper {
                 pstmt.addBatch();
                 if (i % 1000 == 0){
                     pstmt.executeBatch();
+                    conn.commit();
                 }
             }
             pstmt.executeBatch();
+            conn.commit();
             pstmt.close();
         }  catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    public static void insertRoutePoint(String tableName, Map<String,List<Point>> routeMap) {
+        String key = "MySQL";
+        String sql = "INSERT INTO " + tableName + " (" +
+                "fix_pt,longitude,latitude,  route,seq) VALUES (?,?,?,?,?)";
+        Connection conn = getConnection(key);
+        try {
+            conn.setAutoCommit(false);
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            for (String r : routeMap.keySet()) {
+                for (int i = 0; i < routeMap.get(r).size();i++) {
+                    Point p = routeMap.get(r).get(i);
+                    pstmt.setString(1, p.pid);
+                    pstmt.setDouble(2, p.longitude);
+                    pstmt.setDouble(3, p.latitude);
+                    pstmt.setString(4, r);
+                    pstmt.setInt(5,i+1);
+                    pstmt.addBatch();
+                    if (i % 1000 == 0) {
+                        pstmt.executeBatch();
+                        conn.commit();
+                    }
+                }
+            }
+            pstmt.executeBatch();
+            conn.commit();
+            pstmt.close();
+        }  catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * 向数据库中插入航路信息，可用于航路、OD
      * @param tablename

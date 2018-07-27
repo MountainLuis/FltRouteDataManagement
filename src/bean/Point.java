@@ -5,6 +5,7 @@ public class Point {
     public String name;
     public double latitude;
     public double longitude;
+    public int seq;
 
     public Point(){
 
@@ -30,6 +31,6 @@ public class Point {
         return pid.hashCode();
     }
     public String toString() {
-     return this.pid + " : " + this.name;
+     return this.pid + " : " + this.name + this.longitude;
     }
 }

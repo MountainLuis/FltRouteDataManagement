@@ -102,4 +102,16 @@ public class JDBCHelperTest {
         JDBCHelper.insertPointList("test",plist);
         System.out.println("Done");
     }
+
+    @Test
+    public void create() {
+        String table = "test";
+        String ptTimeSql = "CREATE TABLE " + table + "(id int primary key auto_increment," +
+                "flt_no varchar(10)" +
+                ")charset=utf8;";
+
+        JDBCHelper.create(ptTimeSql);
+
+
+    }
 }

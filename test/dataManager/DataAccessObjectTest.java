@@ -22,10 +22,14 @@ public class DataAccessObjectTest {
     public void getNaipData() {
         DataAccessObject dao = new DataAccessObject();
         Map<String, List<PointInfo>> rMap = dao.getNaipData();
-        Iterator iter = rMap.keySet().iterator();
-        for (int i = 0; i < 10; i++) {
-            System.out.println(iter.next());
+        for (String r : rMap.keySet()) {
+           for (PointInfo pi : rMap.get(r)){
+               System.out.println(pi.fix_pt + " " + r);
+           }
         }
+//        for (PointInfo pi : rMap.get("H4")) {
+//            System.out.println(pi.fix_pt);
+//        }
     }
 
     @Test
@@ -51,12 +55,12 @@ public class DataAccessObjectTest {
     @Test
     public void getSubPtSeq() {
         DataAccessObject dao = new DataAccessObject();
-        String r = "A1";
-        String startPt = "BUNTA";
-        String endPt = "IKELA";
+        String r = "H4";
+        String startPt = "NSH";
+        String endPt = "DS";
         List<PointInfo> pList = dao.getSubPtSeq(r, startPt, endPt, 0);
         for (PointInfo pi : pList) {
-            System.out.println(pi.fix_pt);
+            System.out.println(pi.fix_pt + " " + pi.enRoute);
         }
     }
 
@@ -90,6 +94,12 @@ public class DataAccessObjectTest {
             System.out.println(type);
         }
     }
+    @Test
+    public void getAllNaipPtMap() {
+        DataAccessObject dao = new DataAccessObject();
+        Map<String,double[]> ptmap = dao.getAllNaipPtMap();
+        System.out.println(ptmap.size());
+    }
 
     @Test
     public void getAllPtMap() {
@@ -121,5 +131,18 @@ public class DataAccessObjectTest {
         DataAccessObject dao = new DataAccessObject();
         String r = "A1";
         System.out.println(dao.isNaipMapContainKey(r));
+    }
+
+    @Test
+    public void testFltPlan() {
+        DataAccessObject dao = new DataAccessObject();
+        String table = "fme201806_domestic_replace";
+        List<FltPlan> res = dao.getStandardFltPlanFromMySQL(table, "");
+        for (FltPlan plan : res) {
+//            if (plan.flt_path.equals("")) {
+            if (plan.flt_path == null) {
+                System.out.println(plan.flt_no);
+            }
+        }
     }
 }

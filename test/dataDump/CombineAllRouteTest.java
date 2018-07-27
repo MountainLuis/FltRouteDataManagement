@@ -54,4 +54,26 @@ public class CombineAllRouteTest {
 //            }
 //        }
     }
+    @Test
+    public void testString() {
+        String path = " SANKO A326 DONVO G597 AGAVO/N0452F390 Y644  BELTU/N0453F410 Y644 EGOBA Y697 LANAT Y597 MIHOU Y361 SAEKI Y36  ALISA";
+        String[] pts = path.split("\\s+");
+        String res = null;
+        for (String s : pts) {
+            if (s.contains("/")) {
+                s = s.split("/")[0];
+                if (s.equals("AGAVO")) {
+                    res = path.substring(path.indexOf(s));
+                } else {
+                    continue;
+                }
+            } else {
+                if (s.equals("AGAVO")) {
+                    res = path.substring(0, path.indexOf(s)+s.length());
+                }
+            }
+        }
+        System.out.println(res);
+    }
+
 }
