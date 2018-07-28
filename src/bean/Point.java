@@ -14,6 +14,13 @@ public class Point {
         name = s1;
         pid = s2;
     }
+    public Point(String pid, double longtitude, double latitude, String route, int seq){
+        this.pid = pid;
+        this.longitude = longtitude;
+        this.latitude = latitude;
+        this.name = route;
+        this.seq = seq;
+    }
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Point)) {

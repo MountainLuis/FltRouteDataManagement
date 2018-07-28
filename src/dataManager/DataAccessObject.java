@@ -213,11 +213,11 @@ public class DataAccessObject {
             }
         }
         if (start == -1) {
-            LOGGER.error( "航路"+ r  + "不包含点：" + startPt );
+            LOGGER.error( "航路"+ r  + "不包含前点：" + startPt );
             return null;
         }
         if ( end == -1){
-            LOGGER.error( "航路"+ r  + "不包含点：" + startPt );
+            LOGGER.error( "航路"+ r  + "不包含后点：" + endPt );
             return null;
         }
         if (start +1 == end || end + 1 == start) {
@@ -228,13 +228,29 @@ public class DataAccessObject {
             int tmp = start;
             start = end;
             end = tmp;
-            List<PointInfo> pList = route.subList(start + 1,end);
+            List<PointInfo> tmpList = route.subList(start + 1,end);
+            List<PointInfo> pList = deepCopy(tmpList);
             Collections.reverse(pList);
             return pList;
         } else {
             return route.subList(start + 1, end);
         }
      }
+     private List<PointInfo> deepCopy(List<PointInfo> piList){
+        List<PointInfo> res = new ArrayList<>();
+        for (PointInfo pi : piList) {
+            PointInfo p = new PointInfo();
+            p.fix_pt = pi.fix_pt;
+            p.enRoute = pi.enRoute;
+            p.pt_name = pi.pt_name;
+            p.idx = pi.idx;
+            res.add(p);
+        }
+        return res;
+     }
+
+
+
     /**
      * 从Access数据库中取得航班计划
       * @return

@@ -66,3 +66,49 @@
 7，MXD648-WBKK-ZHCC 航路点缺失
 8，N99KZ 公务机，机型湾流GLF6，RCKH-RCSS 高雄飞松山；
 9，XAI762-VMMC-ZGOW 三个航路点
+
+
+## 新的数据处理记录
+2018年计划共529367条，928条存在缺少起落机场或起飞时间；50364缺少Path；
+
+
+####
+ * _domestic提取时已经除去了缺失起落机场的记录
+ * _replace 替换了重名点
+ * _full 补全了缺失path,但OD没有path的plan未删除
+ * -allpath 删除了没有path的plan
+ * 201706 尚有1027条记录没有depTime
+ * 201806 尚有730条记录没有depTime
+ *
+ * 201706 没有OD对应Path的记录有5041条， 见log/NoPathPlan_201706
+ *         缺少Path的OD对见 log/NoPathODs_201706
+ * 201806 没有OD对应Path的记录有2725条，见log/NoPathPlan_201806
+ *         缺少Path的OD对见 log/NoPathODs_201806
+ * allpath 表中：
+ * 201706 有758条无Appeartime
+ * 201806 有482条无Appeartime
+ *
+ * 201806 包括了234条航班号以CHC开头的航班，起飞/落地机场为ZGPT非民航机场，214条记录的Path中JIANGHONG点在NAIP中找不到；
+ * 201806 包括了23条航班号为EMU212的航班，ZGSZ飞VMMH，航线 ATADA URBOR PEXEL ZAO 前三个点NAIP中找不到；
+ * 201806 ZMUB-UAAA/UACC 为乌兰巴托飞哈萨克斯坦的阿拉木图与阿斯塔纳的航班；飞阿斯塔纳的没有过国内空域,
+ * 201806 ZBUT查不到机场,删去ZMUB-UACC、UCFM的航班，以及ZBUT起落航班，共计111条记录；
+          ZBMZ-ZBHH 中间有一段飞到蒙古了,SARUL-POLHO段
+          ZKPY 朝鲜平壤
+   * v2 : 将飞往国外航班的path在国境点出截止；
+   * v3 :新增一个国境点LAMEN
+   * v4 : 将计划中起落机场相同或起落机场是ZZZZ的记录丢弃；
+   * v4_2：新增国境点 DOTMI
+   * V4_3: 若计划的path有两段在国内，只截取前一段；
+   * V4_4 : 将一些没有替换的重名点替换了；
+   * V4_5 : 修改了飞往蒙古乌兰巴托航班的path
+   * V4_6 : 修改了乌兰巴托飞越的航班path，删除了ZBUT起落航班，删除了ZMUB飞往UACC/UCFM 的航班；
+   * V4_7: 国内飞往国外的经A575飞越UDA的航路截断到INTIK，经B339飞越UDA的航路截断到POLHO；
+   * V4_8: 国内飞往国外的飞越PIDOX经A575出国的航路截断到INTIK;
+   * V4_9:修改了平壤起落航班path
+   * V4_10 : 修改了ZSZS-ZSWZ、ZBZL-ZBLA、ZLZY-ZLLL的path，国内飞越SUNUV经B330飞往国外的截断到MORIT
+   * V4_11 : 修改了ZBHH-ZBMZ的航路；ZJHK-RPLL, ZJHK-WMKK,ZGNN-VVNB,ZGNN-ZPPP,ZGNN-VTBU,ZWCM-ZWKl
+   * V4_12: 修改了ZSNJ-ZJHK、ZLIC-ZLJC，ZUGY-VVCR的航路。国内自B208经MU离境航线从NIXAL处截断
+   * V4_13 : 修改了ZJGX-ZGWZ,ZJSY-RCMQ,SJSY-ZSOF,ZJHK-YSSY  的航线；
+   * v5 : 替换flt_path为 点-点 形式；
+
+

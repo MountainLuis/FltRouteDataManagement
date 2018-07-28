@@ -55,13 +55,28 @@ public class DataAccessObjectTest {
     @Test
     public void getSubPtSeq() {
         DataAccessObject dao = new DataAccessObject();
-        String r = "H4";
-        String startPt = "NSH";
-        String endPt = "DS";
-        List<PointInfo> pList = dao.getSubPtSeq(r, startPt, endPt, 0);
-        for (PointInfo pi : pList) {
-            System.out.println(pi.fix_pt + " " + pi.enRoute);
+        String r = "A368";
+        String startPt = "P221";
+        String endPt = "FKG";
+        for (int i = 0; i < 2000; i++) {
+            List<PointInfo> pList = dao.getSubPtSeq(r, startPt, endPt, 0);
+            System.out.println(addToString(pList));
         }
+//        List<PointInfo> pList = dao.getSubPtSeq(r, startPt, endPt, 0);
+//        for (PointInfo pi : pList) {
+//            System.out.println(pi.fix_pt + " " + pi.enRoute);
+//        }
+    }
+    public String addToString(List<PointInfo> pList){
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < pList.size(); i++) {
+            PointInfo pi = pList.get(i);
+            res.append(pi.fix_pt);
+            if (i != pList.size() - 1) {
+                res.append("-");
+            }
+        }
+        return res.toString();
     }
 
     @Test

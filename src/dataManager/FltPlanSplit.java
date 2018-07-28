@@ -33,48 +33,57 @@ public class FltPlanSplit {
         ptRoutes = getPointRoute();
     }
    static int countFill =0;
+    public List<FltPlan> getFltPlan() {
+        String table = "fme201706_domestic_s2";
+        List<FltPlan> res = dao.getStandardFltPlanFromMySQL(table, "");
+        return res;
+    }
+    public void storageFltPlan(List<FltPlan> planList) {
+        String table = "fme201706_domestic_s2_naip ";
+        dao.storageFltPlan(table, planList);
+    }
+    public void storageFltPlan(List<FltPlan> planList, String table) {
+        dao.storageFltPlan(table, planList);
+    }
     public static void main(String[] args) {
         FltPlanSplit fps = new FltPlanSplit();
         List<FltPlan> planList = fps.getFltPlan();
         System.out.println(planList.size());
-        fps.selectPath(planList);  // 此方法用于替换航路中重复点的名称
+//        fps.selectPath(planList);  // 此方法用于替换航路中重复点的名称
 //        System.out.println("count B330 :" + countB330 + " count XUZ" + countXUZ);
 //        for (int i = 0; i < 100; i++) {
 //            System.out.println(planList.get(i).flt_path);
 //        }
 //        List<FltPlan> res = fps.getDomesticPath(planList);
 //        Map<String, String> odm = fps.getODMap(planList);
-
-//        System.out.println("Map have " +odm.size() + " ods");
+//        Set<String> odset = fps.getODSet(planList);
+//        System.out.println("Map have " +odm.size() + " ods   " + odset.size());
 //        fps.checkNUllMapValue(odm);
- //        List<FltPlan> res = fps.fillPath(odm, planList);
+//         List<FltPlan> res = fps.fillPath(odm, planList);
+
 //        System.out.println(res.size());
-        fps.storageFltPlan(planList);
+        Map<String,List<FltPlan>> res = fps.getDomesticPlan(planList);
+        fps.storageFltPlan(res.get("in"),"fme201706_domestic_naip");
+        fps.storageFltPlan(res.get("out"),"fme201706_domestic_2abroad");
+
+//        fps.storageFltPlan(planList);
 //        LOGGER.info("no od path plans : " + countFill);
     }
-    public List<FltPlan> getFltPlan() {
-        String table = "fme201706_domestic_v4";
-        List<FltPlan> res = dao.getStandardFltPlanFromMySQL(table, "");
-        return res;
-    }
-    public void storageFltPlan(List<FltPlan> planList) {
-        String table = "fme201706_domestic_v4_1";
-        dao.storageFltPlan(table, planList);
-    }
+
     public void checkNUllMapValue(Map<String, String> odMap) {
         int countNUll = 0;
         int countFULL = 0;
         for (String s : odMap.keySet()) {
-//            if (odMap.get(s) == null || odMap.get(s).equals("")) {
-//                countNUll++;
+            if (odMap.get(s) == null || odMap.get(s).equals("")) {
+                countNUll++;
 //                LOGGER.warn(s);
-//            } else {
-//                countFULL++;
-//            }
-            LOGGER.info(s);
+            } else {
+                countFULL++;
+            }
+//            LOGGER.info(s);
         }
-//        System.out.println("has value :" + countFULL);
-//        System.out.println("no value : " + countNUll);
+        System.out.println("has value :" + countFULL);
+        System.out.println("no value : " + countNUll);
     }
 
     static  int countChanged = 0;
@@ -171,21 +180,21 @@ public class FltPlanSplit {
     }
 
     public Map<String, String> getODMap(List<FltPlan> fltPlans) {
-//        Map<String, String> odMap = new HashMap<>();
-        Map<String, String> noPathODMap = new HashMap<>();
+        Map<String, String> odMap = new HashMap<>();
+//        Map<String, String> noPathODMap = new HashMap<>();
         for (FltPlan plan : fltPlans) {
             String od = plan.to_ap + "-" + plan.ld_ap;
             String path = plan.flt_path;
             if (path.equals("")) {
-                noPathODMap.put(od, "");
+//                noPathODMap.put(od, "");
               continue;
             } else {
-//                odMap.put(od, path);
+                odMap.put(od, path);
                 continue;
             }
         }
-//        return odMap;
-        return noPathODMap;
+        return odMap;
+//        return noPathODMap;
     }
     public Set<String> getODSet(List<FltPlan> fltPlans) {
         Set<String> res = new HashSet<>();
@@ -195,30 +204,28 @@ public class FltPlanSplit {
         }
         return res;
     }
-
-
-
+    static int countNull = 0;
     public List<FltPlan> fillPath(Map<String, String> odMap, List<FltPlan> planList){
         List<FltPlan> res = new ArrayList<>();
         for (FltPlan plan : planList) {
-            if (plan.to_ap.equals("") || plan.ld_ap.equals("") ) {
-                LOGGER.warn(plan.flt_no + " no Airport");
-                continue;
-            }
+//            if (plan.to_ap.equals("") || plan.ld_ap.equals("") ) {
+//                LOGGER.warn(plan.flt_no + " no Airport");
+//                continue;
+//            }
             String od = plan.to_ap + "-" + plan.ld_ap;
             if (plan.flt_path.equals("")) {
                 if (odMap.containsKey(od)){
                     String path = odMap.get(od);
-//                    if (path.equals("")) {
+                    if (path.equals("")) {
 //                        LOGGER.warn(plan.flt_no + " no value in map");
-//                    }
+//                        countNull++;
+                    }
                     plan.flt_path = path;
                     res.add(plan);
-
                 } else {
 //                    res.add(plan);
-                    countFill++;
-                    LOGGER.info(plan.toString() + " no od");
+//                    countFill++;
+                    LOGGER.info(countFill++   +  " " + plan.toString() + " no od");
                 }
             } else {
                 res.add(plan);
@@ -227,9 +234,31 @@ public class FltPlanSplit {
         return res;
     }
 
+    public Map<String,List<FltPlan>> getDomesticPlan(List<FltPlan> planList) {
+        List<FltPlan> in = new ArrayList<>();
+        List<FltPlan> out = new ArrayList<>();
+        for (FltPlan plan : planList) {
+            if (isDomesticAP(plan.ld_ap)) {
+                in.add(plan);
+                continue;
+            } else {
+                out.add(plan);
+                continue;
+            }
+        }
+        Map<String, List<FltPlan>> res = new HashMap<>();
+        res.put("in",in);
+        res.put("out", out);
+        return res;
+    }
     public List<FltPlan> getDomesticPath(List<FltPlan> planList) {
         List<FltPlan> res = new ArrayList<>();
         for (FltPlan plan : planList) {
+            if (plan.to_ap.equals(plan.ld_ap) || plan.to_ap.equals("ZZZZ") || plan.ld_ap.equals("ZZZZ")
+                    || plan.to_ap.equals("ZBUT") || plan.ld_ap.equals("ZBUT")) {
+                continue;
+            }
+
             if (isDomesticAP(plan.to_ap)) {
                 if (isDomesticAP(plan.ld_ap)) {
                     res.add(plan);
@@ -242,21 +271,18 @@ public class FltPlanSplit {
                     res.add(plan);
                 }
             } else {
-//                if (isDomesticAP(plan.ld_ap)) {
-////                    String path = cutPathOut2In(plan.flt_path);
-////                    plan.flt_path = path;
-////                    res.add(plan);
-////                } else {
-////
-////                }
                 continue;
             }
         }
         return res;
     }
     public boolean isDomesticAP(String s) {
-        String pattern = "^Z[A-Z]*$";
-        return s.matches(pattern);
+        if (s.equals("ZMUB") || s.equals("ZKPY")) {
+            return false;
+        } else {
+            String pattern = "^Z[A-Z]*$";
+            return s.matches(pattern);
+        }
     }
     public String cutPathIn2Out(String path) {
         String[] pts = path.split("\\s+");
@@ -359,17 +385,17 @@ public class FltPlanSplit {
         if (r1.equals("NSH") && pp.equals("UF") && r2.equals("")) {
             res = "UF_安康";
         }
-//        if ((r1.equals("DPX") && r2.equals("XUZ"))||(r2.equals("DPX") && r1.equals("XUZ"))) {
-////            countXUZ++;
-//            res = "DO_姚集";
-//        }
-//        if (r1.equals("DCT") && pp.equals("CD")&&r2.equals("DCT")) {
-//            res = "CD_青白口";
-//        }
-//        if ((r1.equals("KALMU") && pp.equals("CD") && r2.equals("LLC")) ||
-//                ((r1.equals("H9") && pp.equals("CD") && r2.equals("W194")))){
-//            res = "CD_常德";
-//        }
+        if ((r1.equals("DPX") && r2.equals("XUZ"))||(r2.equals("DPX") && r1.equals("XUZ"))) {
+//            countXUZ++;
+            res = "DO_姚集";
+        }
+        if (r1.equals("DCT") && pp.equals("CD")&&r2.equals("DCT")) {
+            res = "CD_青白口";
+        }
+        if ((r1.equals("KALMU") && pp.equals("CD") && r2.equals("LLC")) ||
+                ((r1.equals("H9") && pp.equals("CD") && r2.equals("W194")))){
+            res = "CD_常德";
+        }
         if (pp.equals("KM")){
             res = "KM_怀来";
         }

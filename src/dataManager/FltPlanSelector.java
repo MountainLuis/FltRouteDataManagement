@@ -4,13 +4,17 @@ import bean.FltPlan;
 import bean.Point;
 import bean.PointInfo;
 import org.apache.log4j.Logger;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import sun.plugin2.os.windows.FLASHWINFO;
 
+import java.lang.management.PlatformLoggingMXBean;
 import java.util.*;
 
 /**
  * v2 : 将飞往国外航班的path在国境点出截止；
  * v3 :新增一个国境点LAMEN
  * v4 : 将计划中起落机场相同或起落机场是ZZZZ的记录丢弃；
+ *
  * v4_2：新增国境点 DOTMI
  * V4_3: 若计划的path有两段在国内，只截取前一段；
  * V4_4 : 将一些没有替换的重名点替换了；
@@ -26,46 +30,51 @@ import java.util.*;
  * v5 : 替换flt_path为 点-点 形式；
  */
 public class FltPlanSelector {
+    //fme201706_domestic  _naip: 起落都是国内； _2abroad：飞往国外机场
     private static final Logger LOGGER = Logger.getLogger(FltPlanSelector.class);
     DataAccessObject dao = new DataAccessObject();
     public FltPlanSelector() {
 
     }
     public List<FltPlan> getFltPlans() {
-        String table = "fme201806_domestic_v4_13";
+//        String table = "fme201706_domestic_naip";
+        String table = "fme201806_domestic_final_1";
         List<FltPlan> res = dao.getStandardFltPlanFromMySQL(table,"");
         return res;
     }
     public void storageFltPlan(List<FltPlan> planList) {
-        String table = "fme201806_domestic_v5";
+//        String table = "fme201706_domestic_s3";
+        String table = "fme201806_domestic_final_2";
         dao.storageFltPlan(table,planList);
     }
     public Set<String> notInNAIPPoint = new HashSet<>();
     public static void main(String[] args){
         FltPlanSelector fps = new FltPlanSelector();
         List<FltPlan> fltPlanList = fps.getFltPlans();
+
+//        fps.changePointName(fltPlanList);
+//        fps.checkPlan(fltPlanList);
 //        List<FltPlan> res = fps.deleteUselessPlan(fltPlanList);
-//         List<FltPlan> res0 = fps.cutGoAbroadPlan(fltPlanList);
+//         List<FltPlan> res = fps.cutGoAbroadPlan(fltPlanList);
         List<FltPlan> res = fps.changeFltRoute(fltPlanList);
 //        List<FltPlan> res = fps.changePath(fltPlanList);
-        LOGGER.debug(fltPlanList.size() + "  " + res.size());
+//        LOGGER.debug(fltPlanList.size() + "  " + res.size());
 
         fps.storageFltPlan(res);
     }
+    public void checkPlan(List<FltPlan> planList) {
+        for (FltPlan plan : planList) {
+            if (plan.to_ap.equals("ZJSY")) {
+                System.out.println(plan.flt_path);
+            }
+        }
 
+    }
     //============================================
     static int countCHC = 0, countNoPt = 0,countVMMH = 0;
     public List<FltPlan> changeFltRoute(List<FltPlan> planList) {
         List<FltPlan> res = new ArrayList<>();
         for (FltPlan plan : planList) {
-            if (plan.flt_no.startsWith("CHC")){
-                countCHC++;
-                continue;
-            }
-            if (plan.ld_ap.equals("VMMH")) {
-                countVMMH++;
-                continue;
-            }
             try {
                 String path = addToString(splitRoute(plan));
                 plan.flt_path = path;
@@ -74,8 +83,7 @@ public class FltPlanSelector {
                 LOGGER.debug(plan.toString() + "   " +plan.flt_path);
             }
         }
-        LOGGER.debug("CHC plans : " +countCHC + " VMMH plans :" + countVMMH);
-        return res;
+         return res;
     }
     public String addToString(List<PointInfo> pList){
         StringBuilder res = new StringBuilder();
@@ -89,12 +97,13 @@ public class FltPlanSelector {
         return res.toString();
     }
     public List<PointInfo> splitRoute(FltPlan plan){
-        String path =plan.flt_path;
+        String path = plan.flt_path;
         List<PointInfo> fixPts = new ArrayList<>();  //as result
 
         String[] tmp = path.trim().split("\\s+");
         int[] flag = new int[tmp.length]; //route = 1; point = 0;
-        if (tmp[0].equals("DCT")) {
+
+        if (tmp[0].equals("DCT") || !dao.isNaipPoints(tmp[0])) {
             flag[0] = -1;
         } else {
             PointInfo p0 = createPoint(splitPointName(tmp[0]));
@@ -112,7 +121,7 @@ public class FltPlanSelector {
             if (dao.isNaipMapContainKey(tmp[i]) && (flag[i - 1] == 0)) {
                 flag[i] = 1;
 //                System.out.println("R:" + tmp[i]);
-                List<PointInfo> ptsOnR = new ArrayList<>();
+                List<PointInfo> ptsOnR = null;
                 if (i == tmp.length - 1) {
                    LOGGER.info("不能以航路作为path结尾。" + plan.toString() + " " + path);
                 } else {
@@ -120,8 +129,8 @@ public class FltPlanSelector {
                     String pointAfter = splitPointName(tmp[i+1]);
                     ptsOnR = dao.getSubPtSeq(tmp[i], pointPrev,pointAfter,0);
                 }
-                if (ptsOnR == null) {
-                    LOGGER.info( countNoPt++ + "航路没有点  " + plan.toString());
+                if (ptsOnR == null || ptsOnR.isEmpty()) {
+//                    LOGGER.info( countNoPt++ + "航路没有点  " + plan.toString());
                     continue;
                 }else {
                     fixPts.addAll(ptsOnR);
@@ -337,46 +346,46 @@ public class FltPlanSelector {
         return res;
     }
     static int countZKPY = 0;
-    public List<FltPlan> changePathForZKPY(List<FltPlan> planLIst) {
+    public List<FltPlan> changePathOne(List<FltPlan> planLIst) {
         List<FltPlan> res = new ArrayList<>();
-        String path1 = "CDY W83 ANDIN A575 BIDIB A345 GOLOT/N0400F250"; //ZBAA-ZKPY
-        String path2 = " DCT HSH G455 SURAK A326 SANKO/K0830S1130 B332  TOMUK/N0380F250";//ZSPD-ZKPY
-        String path3 = "ANSUK A345 GOLOT/N0320F190";//ZYTX-ZKPY
-        String path4 = "GOLOT/K0750S0920 A345 BIDIB A575 CHG G332  GITUM";//ZKPY-ZBAA
-        String path5 = "TOMUK/K0780S0920 B332  SANKO/K0830S1130 A326 AKARA A593 PUD";//ZKPY_ZSPD
-        String path6 = " YIN A461 WXI W4 HCH W173 NIXEP W8 DOBGA A326 SANKO  B332 TOMUK/N0420F250";//ZGGG_ZKPY
-        String path7 = "TOMUK/K0780S0720 B332 SANKO A326  MAKNO    W5 HCH W4 WXI A461 LIG R473 BEMAG V5 ATAGA";//ZKPY-ZGGG
+        String path1 = "YBL B215 TYN"; //ZWWW-ZSJN
+        String path2 = "DNH  G470 ELBAD H137";//ZSPD-ZKPY
+//        String path3 = "ANSUK A345 GOLOT/N0320F190";//ZYTX-ZKPY
+//        String path4 = "GOLOT/K0750S0920 A345 BIDIB A575 CHG G332  GITUM";//ZKPY-ZBAA
+//        String path5 = "TOMUK/K0780S0920 B332  SANKO/K0830S1130 A326 AKARA A593 PUD";//ZKPY_ZSPD
+//        String path6 = " YIN A461 WXI W4 HCH W173 NIXEP W8 DOBGA A326 SANKO  B332 TOMUK/N0420F250";//ZGGG_ZKPY
+//        String path7 = "TOMUK/K0780S0720 B332 SANKO A326  MAKNO    W5 HCH W4 WXI A461 LIG R473 BEMAG V5 ATAGA";//ZKPY-ZGGG
         for (FltPlan plan : planLIst) {
-                if (plan.ld_ap.equals("ZKPY") && plan.to_ap.equals("ZBAA")) {
-                    plan.flt_path = path1;
+                if (plan.ld_ap.equals("ZWWW") && plan.flt_path.contains(path2) ) {
+                    plan.flt_path = plan.flt_path.replaceAll(path2," ");
                     res.add(plan);
                     continue;
-                } else if (plan.ld_ap.equals("ZKPY") && plan.to_ap.equals("ZSPD")) {
-                    plan.flt_path = path2;
+                } else if (plan.ld_ap.equals("ZWWW") && plan.flt_path.contains(path1)) {
+                    plan.flt_path = plan.flt_path.replaceAll(path1, "YBL W199 YHD B215 TYN");
                     res.add(plan);
                     continue;
-                } else if (plan.ld_ap.equals("ZKPY") && plan.to_ap.equals("ZYTX")) {
-                    plan.flt_path = path3;
-                    res.add(plan);
-                    continue;
-                }else if (plan.ld_ap.equals("ZKPY") && plan.to_ap.equals("ZGGG")) {
-                    plan.flt_path = path6;
-                    res.add(plan);
-                    continue;
-                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("ZGGG")) {
-                    plan.flt_path = path7;
-                    res.add(plan);
-                    continue;
-                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("ZBAA")) {
-                    plan.flt_path = path4;
-                    res.add(plan);
-                    continue;
-                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("ZSPD")) {
-                    plan.flt_path = path5;
-                    res.add(plan);
-                    continue;
-                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("WSSS")) {
-                    continue;
+//                } else if (plan.ld_ap.equals("ZKPY") && plan.to_ap.equals("ZYTX")) {
+//                    plan.flt_path = path3;
+//                    res.add(plan);
+//                    continue;
+//                }else if (plan.ld_ap.equals("ZKPY") && plan.to_ap.equals("ZGGG")) {
+//                    plan.flt_path = path6;
+//                    res.add(plan);
+//                    continue;
+//                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("ZGGG")) {
+//                    plan.flt_path = path7;
+//                    res.add(plan);
+//                    continue;
+//                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("ZBAA")) {
+//                    plan.flt_path = path4;
+//                    res.add(plan);
+//                    continue;
+//                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("ZSPD")) {
+//                    plan.flt_path = path5;
+//                    res.add(plan);
+//                    continue;
+//                }else if (plan.to_ap.equals("ZKPY") && plan.ld_ap.equals("WSSS")) {
+//                    continue;
                 } else {
                     countZKPY++;
                     res.add(plan);
@@ -484,18 +493,25 @@ public class FltPlanSelector {
         return res;
     }
     //==================================================
-        public List<FltPlan> deleteUselessPlan(List<FltPlan> planList) {
+    public List<FltPlan> deleteUselessPlan(List<FltPlan> planList) {
         List<FltPlan> res = new ArrayList<>();
         int count = 0;
+        int idx = 0;
         for (FltPlan plan : planList) {
-            if (plan.to_ap.equals(plan.ld_ap)|| plan.to_ap.equals("ZZZZ") || plan.ld_ap.equals("ZZZZ")) {
-                count++;
-                continue;
-            } else {
+//            if (plan.flt_no.startsWith("CHC") || plan.ld_ap.equals("VMMH") || plan.ld_ap.equals("ZGUH")){
+//                continue;
+//            }
+//            if (plan.to_ap.equals(plan.ld_ap)|| plan.to_ap.equals("ZZZZ") || plan.ld_ap.equals("ZZZZ")) {
+//                count++;
+//                continue;
+//            } else {
                 res.add(plan);
+//            }
+            if (idx++ == 1000){
+                break;
             }
         }
-        System.out.println("droped plans : " + count);
+//        System.out.println("droped plans : " + count);
         return res;
         }
     //===============================================
@@ -503,19 +519,20 @@ public class FltPlanSelector {
     public List<FltPlan> cutGoAbroadPlan(List<FltPlan> plans) {
         List<FltPlan> res = new ArrayList<>();
         for (FltPlan plan : plans) {
+            if (plan.flt_no.startsWith("CHC")) {
+                continue;
+            }
             if (isDomesticAP(plan.ld_ap)) {
                 res.add(plan);
             } else {
                 countAbroad++;
-                if (plan.to_ap.equals("ZMUB") || plan.ld_ap.equals("ZMUB") || plan.to_ap.equals("ZKPY")
-                        || plan.ld_ap.equals("ZKPY")) {
+                if (!plan.to_ap.startsWith("ZJ")) {
                     res.add(plan);
                 } else {
                     String path = cutPath(plan);
                     if(!path.equals(plan.flt_path)) {
                         countChanged++;
-//                        if (!plan.to_ap.equals("ZBAA") && !plan.to_ap.equals("ZSPD"))
-                        LOGGER.info(plan.toString() + " " + plan.flt_path);
+                         LOGGER.info(plan.toString() + " " + plan.flt_path);
                         LOGGER.info("========" +path);
                     }
                     plan.flt_path = path;
@@ -529,6 +546,9 @@ public class FltPlanSelector {
     }
     public String cutPath(FltPlan plan) {
         String path = plan.flt_path;
+        if (isDomesticAP(plan.ld_ap) || plan.ld_ap.equals("ZKPY") || plan.ld_ap.equals("ZMUB")){
+            return path;
+        }
         String[] ptss = path.split("\\s+");
         List<String> pts = Arrays.asList(ptss);
         String res = null;
@@ -540,22 +560,22 @@ public class FltPlanSelector {
                     res = path.substring(0,path.indexOf(s) + s.length());
                     break;
                 } else {
-//                    if (s.equals("ANIKU/K0826S1160") || (tt.equals("UDA") && pts.get(i-1).equals("A575"))) {
-//                        res = path.substring(0,path.indexOf(s)) + " INTIK";
-//                        break;
+                    if (tt.equals("SIKOU") && pts.get(i-1).equals("A202") && pts.get(i-1).equals("J104") ) {
+                        res = path.substring(0,path.indexOf(s) + s.length());
+                        break;
 //                    } else if (tt.equals("UDA") && pts.get(i-1).equals("B339")) {
 //                        res = path.substring(0,path.indexOf(s)) + " POLHO";
 //                    }else {
-                        continue;
-//                    }
+//                        continue;
+                    }
                 }
             } else {
                 if (dao.isBoundriesContainPoint(s)) {
                     res = path.substring(0,path.indexOf(s) + s.length());
                     break;
                 }else  {
-                    if (s.equals("MU") && pts.get(i-1).equals("B208")) {
-                        res = path.substring(0,path.indexOf(s)) + " NIXAL";
+                    if (s.equals("SIKOU") && pts.get(i-1).equals("A202")) {
+                        res = path.substring(0,path.indexOf(s) + s.length());
                         break;
 //                    if (s.equals("UDA") && pts.get(i-1).equals("A575")) {
 //                        res = path.substring(0,path.indexOf(s)) + " INTIK";
@@ -563,9 +583,9 @@ public class FltPlanSelector {
 //                    } else if (s.equals("UDA") && pts.get(i-1).equals("B339")) {
 //                        res = path.substring(0,path.indexOf(s)) + " POLHO";
 //                        break;
-//                    }else if (s.equals("A575") && pts.get(i-1).equals("PIDOX")){
-//                        res = path.substring(0,path.indexOf(s)) +" INTIK";
-//                        break;
+                    }else if (s.equals("J104")){
+                        res = path.substring(0,path.indexOf(s));
+                        break;
                     }else{
                             continue;
                         }
@@ -586,4 +606,76 @@ public class FltPlanSelector {
         String pattern = "^Z[A-Z]*$";
         return s.matches(pattern);
     }
+
+    public void changePointName(List<FltPlan> planList) {
+        List<FltPlan> res = new ArrayList<>();
+        String tar = "IDOSI/*[A-Z]*[0-9]*[A-Z]*[0-9]*";
+        String pt0 = "HG_衡水";String pt1 = "CH_CHEUNG_CHAU";
+        String[] pts = new String[]{"P901", "ARAPA", "JGHG", "RMK/LZ1226","JIANG"};
+        String[] pts2 = new String[]{"JANGH", "TH01"};
+        String path1 = "CH_CHEUNG_CHAU  A461";
+        for (FltPlan plan : planList) {
+
+            if (plan.to_ap.equals("ZJSY") && plan.flt_path.contains(path1)) {
+                plan.flt_path = plan.flt_path.replace(path1, "");
+            }
+//                plan.flt_path = plan.flt_path.split("V571")[0];
+//            }
+
+
+//            if (plan.to_ap.equals("ZJSY")) {
+//                plan.flt_path = plan.flt_path.replace(pt0, pt1);
+//            }
+//            if (plan.ld_ap.equals("VHHH") && plan.to_ap.contains("ZJ")) {
+//                plan.flt_path = plan.flt_path.split("V571")[0];
+//            }
+//            if (plan.ld_ap.equals("RCTP") && plan.to_ap.startsWith("ZJ")) {
+//                plan.flt_path = plan.flt_path.split("J104")[0];
+//            }
+//            if (plan.ld_ap.equals("RCKH") && plan.to_ap.startsWith("ZJ")) {
+//                plan.flt_path = plan.flt_path.split("KAPLI")[0];
+//            }
+//            if (plan.flt_path.contains("J104")) {
+//                 plan.flt_path = plan.flt_path.replace("J104", "");
+//            }
+//            if (plan.flt_path.contains("CHALI")) {
+//                 plan.flt_path = plan.flt_path.replace("CHALI", "");
+//            }
+//            if (plan.flt_path.contains("IDOSI")) {
+//                plan.flt_path = plan.flt_path.replace("IDOSI", "");
+//                plan.flt_path = plan.flt_path.replace(tar, "");
+//            }
+//            if (plan.flt_path.contains("TAOYUAN")) {
+//                plan.flt_path = plan.flt_path.replace("TAOYUAN", " SANES ");
+//            }
+//            if (plan.flt_path.contains("LUXI")) {
+//                plan.flt_path = plan.flt_path.replace("LUXI", " P159 ");
+//            }
+//            if (plan.flt_path.contains("GHN")) {
+//                plan.flt_path = plan.flt_path.replace("GHN", " JTG ");
+//            }
+//            for (int i = 0; i < 4; i++) {
+//                if (plan.flt_path.contains(pts[i])) {
+//                    plan.flt_path = plan.flt_path.replace(pts[i], "");
+//                }
+//            }
+//            for (int i = 0; i < 2; i++) {
+//                if (plan.flt_path.contains(pts2[i])) {
+//                    plan.flt_path = plan.flt_path.replace(pts2[i], " DCT ");
+//                }
+//            }
+//            if (plan.flt_path.contains(path1)){
+//                    plan.flt_path = plan.flt_path.replace(path1, reStr);
+//                    System.out.println(plan.flt_path);
+//            } else  if( plan.flt_path.contains(path2)){
+//                plan.flt_path = plan.flt_path.replace(path2, reStr);
+////                System.out.println(plan.flt_path);
+//            }else if (plan.flt_path.contains(path3)) {
+//                plan.flt_path = plan.flt_path.replace(path3, " ");
+////                System.out.println(plan.flt_path);
+            }
+//        }
+    }
+
+
  }

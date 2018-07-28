@@ -213,8 +213,8 @@ public class JDBCHelper {
                     pstmt.setString(1, p.pid);
                     pstmt.setDouble(2, p.longitude);
                     pstmt.setDouble(3, p.latitude);
-                    pstmt.setString(4, r);
-                    pstmt.setInt(5,i+1);
+                    pstmt.setString(4, r + "_1");
+                    pstmt.setInt(5,i);
                     pstmt.addBatch();
                     if (i % 1000 == 0) {
                         pstmt.executeBatch();

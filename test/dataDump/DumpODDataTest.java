@@ -19,9 +19,14 @@ public class DumpODDataTest {
     }
     @Test
     public void testString() {
-        String s = "'SULEP-P374-P322-P40-NSH'";
-        String sub = s.substring(1, s.length() - 1);
-        System.out.println(sub);
+        String s = "ALLEY V31 IDOSI/S789N999 P901 DCT";
+        String tar = "IDOSI/*[A-Z]*[0-9]*[A-Z]*[0-9]*";
+        String re = "S12 DOOOO HEHE";
+        s = s.replaceAll(tar,re);
+        String path = "DCT MLT DCT SAMAS A202 SIKOU V571 GAMBA/N0426F200  V571 MAPLE/N0426F200 V571 COMBI/N0421F190 V571 CANTO";
+        String res = path.split("V571")[0];
+//        String sub = s.substring(1, s.length() - 1);
+        System.out.println(s);
     }
     @Test
     public void testGetPoint() {
